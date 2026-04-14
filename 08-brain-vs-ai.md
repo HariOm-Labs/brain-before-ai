@@ -57,8 +57,10 @@ Three categories. Each contains things current AI simply has no equivalent for.
 ### Higher-level properties — not even close
 
 - **Embodiment.** Your concepts are grounded in physical experience. You know what "heavy" means because you've lifted things. AI knows what "heavy" means because it's a word that appears near other words. These are not the same kind of knowing.
-- **Intrinsic motivation.** Curiosity. The drive to explore for its own sake. AI has none of this. It optimizes whatever loss function you give it, then stops.
+- **Intrinsic motivation.** Curiosity. The drive to explore for its own sake. AI has hand-engineered versions of this — there's a whole research field on curiosity-driven reinforcement learning (Pathak et al., 2017), count-based exploration, empowerment, Random Network Distillation. These are real and they work. But they're *programmed* loss terms, not the emergent biological drive that makes a child play with everything in sight without being told to. The AI does what its loss function rewards. The child does it because being alive seems to require it.
 - **Common sense.** The vast world model humans build by being alive in the world for years. AI gets glimpses of this through training data but can't reliably reason about everyday physical situations.
+
+> *Each of these gaps is an active research area — continual learning for plasticity, neuromorphic chips (Intel Loihi, IBM TrueNorth) for biological-style spiking computation, embodied AI and robotics for grounding, mechanistic interpretability for borrowing tools from neuroscience to understand AI. None has matured into a deployed mainstream system yet, but the gaps aren't being ignored. Knowing what they are means you'll recognize the breakthrough when it actually arrives.*
 
 ---
 
@@ -105,6 +107,19 @@ The model was trained months or years ago on a huge dataset. Now it's running in
 
 (Some systems have memory features that store recent conversation in a database — but that's not the model learning. It's just additional input being fed back in. The actual weights stay frozen.)
 
+### One nuance worth naming: in-context learning
+
+Modern large language models do something genuinely surprising that complicates the simple "no learning at inference" story. It's called **in-context learning**.
+
+When you give an LLM a few examples in your prompt and it adapts to follow the pattern — even on a task it was never explicitly trained on — that's a real form of behavioral adaptation. You can give GPT-4 three made-up examples of a brand-new translation rule and it'll continue the pattern. No weight updates happen. But something *like* learning is occurring inside the forward pass.
+
+This matters because it's how few-shot prompting works, and it's a meaningful capability. But it's still fundamentally different from biological learning in two ways:
+
+1. **The "learning" lives only inside that conversation.** Close the chat and it's gone. The model itself remains identical for the next user.
+2. **It's more like working memory than long-term memory.** You're not changing the model — you're just temporarily configuring its behavior using its existing weights.
+
+So a more precise claim is: **deployed AI models don't update their long-term knowledge during inference.** They can adapt their behavior on the fly through in-context cues, but nothing about that adaptation persists. Your brain, by contrast, makes both kinds of changes simultaneously — short-term context-dependent behavior AND long-term synaptic strengthening — every moment of every day.
+
 This isn't a temporary limitation. It's a fundamental architectural difference.
 
 ---
@@ -119,7 +134,7 @@ Now you can hear AI claims with a sharper ear.
 
 **"Soon AI will surpass humans"** → On specific narrow tasks, often already true. On the full general capability of a continuously-learning, embodied, motivated mind: still very far.
 
-**"AI is conscious"** → Almost certainly not, in any meaningful biological sense. Consciousness probably requires the kind of continuous self-modification, body grounding, and chemistry-mediated state that current AI architectures don't have.
+**"AI is conscious"** → Almost certainly not, in any sense most people mean by the word. But honestly — *we don't know what consciousness requires.* That's one of the hardest unsolved questions in philosophy of mind. Some philosophers (functionalists) argue computational processes alone could be sufficient. Others (biological naturalists) argue the substrate matters. The science doesn't have an answer. What we *can* say: whatever consciousness needs, current AI architectures lack most of the candidate substrates — continuous self-modification, body grounding, chemistry-mediated states, and the integrated processing that seems to underlie subjective experience in animals.
 
 **"AI will keep improving exponentially"** → On the things current architectures can do, yes. On the things current architectures can't do at all (continuous plasticity, common sense, embodied reasoning), adding more compute doesn't help. These need new architectures, and there's no clear path to them yet.
 

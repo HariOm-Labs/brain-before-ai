@@ -28,39 +28,43 @@ This guide is the story of what happened in Maya's head. The good news: it's the
 
 ## Chapter 1: The city inside your head
 
-Imagine a city. Not a neat grid — something sprawling, organic, alive. A hundred billion tiny buildings, connected by hundreds of trillions of roads. Some roads are wide and well-maintained. Others are barely dirt paths. Some neighborhoods are crowded and noisy; others are quiet.
+Picture your brain as a city.
 
-This city is your brain.
+A sprawling one. **100 billion tiny buildings**, connected by **trillions of roads**.
 
-Each building is a **neuron** — a single brain cell. Each road is a **synapse** — the place where one neuron passes a message to another.
+- Each building is a **neuron** — a single brain cell.
+- Each road is a **synapse** — where one neuron passes a message to the next.
 
-The city has districts. There's a **Vision District** in the back of the head, busy with shapes and colors. A **Language District** on the left side, buzzing with words and meanings. A **Math District** a bit above that, doing arithmetic. A **Memory District** buried deep in the middle, archiving experiences. And up in front, a kind of city hall called the **Prefrontal Cortex**, where decisions get made and everything gets tied together.
+Like any city, it has districts. Each one has a job:
 
+- **Vision** — at the back of your head, processing what you see.
+- **Language** — on the left side, handling words and meaning.
+- **Math** — a bit above that, for numbers and equations.
+- **Memory** — buried deep in the middle, filing away experiences.
+- **Prefrontal Cortex** — up front. Think of it as city hall, where decisions get made and everything ties together.
+
+```mermaid
+flowchart TD
+    PFC[PREFRONTAL CORTEX<br/><i>city hall — decisions, planning</i>]
+
+    L[LANGUAGE<br/><i>words</i>]
+    M[MATH<br/><i>numbers</i>]
+    V[VISION<br/><i>shapes</i>]
+    MEM[MEMORY<br/><i>experiences</i>]
+
+    L --> PFC
+    M --> PFC
+    V --> PFC
+    MEM --> PFC
+
+    style PFC fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style L fill:#e3f2fd,stroke:#1565c0
+    style M fill:#e8f5e9,stroke:#2e7d32
+    style V fill:#f3e5f5,stroke:#6a1b9a
+    style MEM fill:#fce4ec,stroke:#ad1457
 ```
-                    ┌──────────────────────┐
-                    │   PREFRONTAL CORTEX  │
-                    │      (city hall:     │
-                    │   decisions, plans)  │
-                    └──────────────────────┘
-                              │
-            ┌─────────────────┼─────────────────┐
-            │                 │                 │
-     ┌────────────┐    ┌────────────┐    ┌────────────┐
-     │ LANGUAGE   │    │    MATH    │    │   VISION   │
-     │  DISTRICT  │    │  DISTRICT  │    │  DISTRICT  │
-     │  (words)   │    │  (numbers) │    │  (shapes)  │
-     └────────────┘    └────────────┘    └────────────┘
-                              │
-                    ┌──────────────────────┐
-                    │    MEMORY DISTRICT   │
-                    │    (hippocampus:     │
-                    │    filed experiences)│
-                    └──────────────────────┘
 
-              All connected by trillions of roads (synapses).
-              Each road can be wide or narrow. Experience
-              decides which ones get paved.
-```
+*All districts connected by trillions of roads (synapses). Some roads wide, some narrow. **Experience decides which ones get paved.***
 
 When Maya read "F = m × a", the symbols entered her city through her eyes. What happened next is a chase — the message travels from district to district, leaving tiny changes wherever it goes. Those changes, accumulated over days and weeks, are her new knowledge.
 

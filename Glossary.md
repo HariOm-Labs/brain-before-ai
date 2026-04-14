@@ -52,7 +52,7 @@ If you're reading a chapter and hit a term you don't recognize, come here first.
 
 **Dendrite** — One of the many input branches of a neuron. Receives signals from other neurons via synapses.
 
-**Dendritic spine** — A tiny mushroom-shaped bump on a dendrite where a single synapse lives. Spines grow when you learn and shrink when you forget.
+**Dendritic spine** — A tiny mushroom-shaped bump on a dendrite that serves as the **receiving side** of an excitatory synapse. The axon terminal of another neuron meets the spine across a tiny gap (the synaptic cleft). Spines grow when you learn and shrink when you forget. Spines never connect directly to other spines — they're always on the postsynaptic (receiving) side.
 
 **Depolarization** — When a neuron's charge becomes less negative (closer to zero or positive). The process of becoming excited.
 

@@ -2,9 +2,11 @@
 
 > **Understand the brain before the machine.**
 
-A plain-English guide to how your brain actually learns — written for engineers, students, and curious minds who want to understand the **original** before studying the imitation (AI).
+Most people have no idea what's actually happening inside their head when they learn.
 
-No biology degree required. Just enough brain to see what the machine is inspired by — and where it falls short.
+By the end of this guide, you will. Down to the molecule. And then you'll be able to look at modern AI and see precisely what it captures — and what it doesn't.
+
+Written for engineers, students, and curious minds who want to understand the **original** before studying the imitation. No biology degree required.
 
 ---
 
@@ -60,27 +62,53 @@ These are the takeaways the guide is built to deliver. If you remember only this
 
 ## Full table of contents
 
+The narrative chapters tell one continuous story. Each one ends with a bridge to the next, so they read smoothly front-to-back. The reference materials at the bottom are for dipping into anytime.
+
+### 📖 Front matter
+
 | # | Chapter | Read | What you'll learn |
 |---|---------|------|-------------------|
 | — | [Background: Why This Guide Exists](Background.md) | ~8 min | Motivation, approach, honest caveat. **Read this first.** |
 | ★ | [The Brain, Told as a Story](The-Brain-Story.md) | ~25 min | The whole guide as a plain-English narrative. Best first deep-read. |
+
+### 🧠 Part 1 — How the brain works (chapters 1–7)
+
+| # | Chapter | Read | What you'll learn |
+|---|---------|------|-------------------|
 | 1 | [The Biological Neuron](01-biological-neuron.md) | ~12 min | The building blocks: what a single neuron is and how signal flows through it |
 | 2 | [Neural Communication](02-neural-communication.md) | ~10 min | How action potentials work — the 6-phase electrical spike |
 | 3 | [Synaptic Transmission](03-synaptic-transmission.md) | ~10 min | The 9-step handoff between neurons — electrical → chemical → electrical |
-| 4 | [Learning Mechanisms](04-learning-mechanisms.md) | ~15 min | How neurons physically change when you learn (Hebb's law, NMDA, LTP, sleep, spacing) |
+| 4 | [Learning Mechanisms](04-learning-mechanisms.md) | ~15 min | How neurons physically change when you learn (Hebb's law, NMDA, LTP) |
 | 5 | [Computational Hierarchy](05-computational-hierarchy.md) | ~8 min | Why one biological neuron is more powerful than an entire artificial one |
 | 6 | [Neuromodulation Systems](06-neuromodulation.md) | ~10 min | How dopamine, acetylcholine, norepinephrine, and serotonin act as "knobs" |
 | 7 | [Understanding & Intelligence](07-understanding-intelligence.md) | ~18 min | The real difference between learning, knowledge, understanding, and intelligence |
-| 8 | [Brain vs Artificial Intelligence](08-brain-vs-ai.md) | ~6 min | What current AI captures (~5%) and what it misses (~95%) |
-| 9 | [Mental Models](09-mental-models.md) | ~12 min | Five useful analogies: buckets, knobs, tools vs content, trucks, city |
-| 10 | [Quick Reference](10-quick-reference.md) | skim | Numbers, timescales, equations, troubleshooting |
-| 11 | [Sleep, Memory & Forgetting](11-sleep-memory-forgetting.md) | ~15 min | Types of memory, consolidation, why we forget, reconsolidation |
-| 12 | [Applying the Science](12-applying-the-science.md) | ~15 min | Ten practical study strategies, each with its neural mechanism |
-| — | [Common Misconceptions](Misconceptions.md) | ~10 min | Popular myths about the brain and what the science actually says |
-| — | [Glossary](Glossary.md) | skim | Plain-English definitions of every technical term, alphabetical |
 
-**Full guide, front-to-back:** roughly 3 hours of focused reading.
+### 🤖 Part 2 — The AI contrast (chapter 8)
+
+| # | Chapter | Read | What you'll learn |
+|---|---------|------|-------------------|
+| 8 | [Brain vs Artificial Intelligence](08-brain-vs-ai.md) | ~6 min | What current AI captures (~5%) and what it misses (~95%) — the payoff chapter |
+
+### 💡 Part 3 — Holding it all together (chapters 9, 10, 11)
+
+| # | Chapter | Read | What you'll learn |
+|---|---------|------|-------------------|
+| 9 | [Mental Models](09-mental-models.md) | ~12 min | Five compact analogies for carrying everything you've learned |
+| 10 | [Sleep, Memory & Forgetting](10-sleep-memory-forgetting.md) | ~15 min | The second half of every learning session, and why forgetting is a feature |
+| 11 | [Applying the Science](11-applying-the-science.md) | ~15 min | Ten practical study strategies, each with its neural mechanism — the cash-out |
+
+### 📚 Reference materials (dip in anytime)
+
+| Item | Read | Purpose |
+|------|------|---------|
+| [Quick Reference (Appendix)](appendix-quick-reference.md) | skim | Numbers, timescales, equations, troubleshooting Q&A |
+| [Common Misconceptions](Misconceptions.md) | ~10 min | Popular myths about the brain and what the science actually says |
+| [Glossary](Glossary.md) | skim | Plain-English definitions of every technical term, alphabetical |
+
+**Full guide, front-to-back (parts 1–3):** roughly 3 hours of focused reading.
 **The Story + Applying the Science:** about 40 minutes and gives you 80% of the practical value.
+
+> *The narrative chapters run cleanly 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9 → 10 → 11. The appendix and other reference materials are separate — dip into them anytime.*
 
 ---
 
@@ -94,20 +122,21 @@ flowchart TD
     Start([👋 Why are you here?]) --> Q1{What's your goal?}
 
     Q1 -->|Just curious, no background| Story[📖 Read the Story<br/>~25 min]
-    Q1 -->|I want practical study tips| Ch12[💡 Chapter 12:<br/>Applying the Science]
-    Q1 -->|I want to evaluate AI claims| Ch8[🤖 Chapter 8:<br/>Brain vs AI]
-    Q1 -->|I want the full mechanism| Full[🔬 Chapters 1 → 2 → 3<br/>the foundation]
-    Q1 -->|I'm stuck on a term| Gloss[📚 Glossary]
-    Q1 -->|I want to bust brain myths| Myth[❌ Misconceptions page]
+    Q1 -->|I want the full guide| Full[📚 Read parts 1→2→3<br/>~3 hours total]
+    Q1 -->|Just practical study tips| Ch12[💡 Chapter 11:<br/>Applying the Science]
+    Q1 -->|Just the AI comparison| Ch8[🤖 Chapter 8:<br/>Brain vs AI]
+    Q1 -->|Stuck on a term| Gloss[📖 Glossary]
+    Q1 -->|Bust brain myths| Myth[❌ Misconceptions]
 
     Story --> Next1{Want to go deeper?}
-    Next1 -->|Yes, into the machinery| Full
-    Next1 -->|Yes, but practical| Ch12
+    Next1 -->|Yes, full guide| Full
+    Next1 -->|Just practical tips| Ch12
     Next1 -->|I'm good for now| Done([✅ You're set])
 
-    Full --> Ch4[Chapter 4:<br/>How learning works]
-    Ch4 --> Ch11[Chapter 11:<br/>Sleep & memory]
-    Ch11 --> Ch12
+    Full --> Part1[Part 1: How the brain works<br/>Chapters 1 → 7]
+    Part1 --> Part2[Part 2: AI contrast<br/>Chapter 8]
+    Part2 --> Part3[Part 3: Holding it together<br/>Ch 9 → 10 → 11]
+    Part3 --> Done
 
     Ch12 --> Done
     Ch8 --> Done
@@ -116,6 +145,10 @@ flowchart TD
 
     style Start fill:#ffe4b5
     style Story fill:#b5e4ff
+    style Full fill:#d5d0ff
+    style Part1 fill:#e3f2fd
+    style Part2 fill:#fff3e0
+    style Part3 fill:#e8f5e9
     style Ch12 fill:#b5ffb5
     style Done fill:#e4ffb5
 ```
@@ -123,11 +156,11 @@ flowchart TD
 </details>
 
 **Or just text-only, if you prefer:**
-- **New to neuroscience?** Start with the [Story](The-Brain-Story.md), then chapters 1 → 2 → 3 for the physical foundation.
-- **Curious about learning?** Jump to chapters 4, 7, 11, and 12.
-- **Want practical study tips?** Go straight to [Chapter 12](12-applying-the-science.md).
-- **Comparing brain to AI?** Read [Chapter 8](08-brain-vs-ai.md).
-- **Just need numbers?** [Chapter 10: Quick Reference](10-quick-reference.md).
+- **New to neuroscience?** Start with the [Story](The-Brain-Story.md). Then read parts 1 → 2 → 3 in order for the full picture.
+- **Want the full continuous read?** [Chapter 1](01-biological-neuron.md) → through to [Chapter 11](11-applying-the-science.md), in order (1→2→3→4→5→6→7→8→9→10→11). Each chapter bridges to the next.
+- **Just want practical study tips?** Skip directly to [Chapter 11](11-applying-the-science.md).
+- **Just want the brain-vs-AI comparison?** [Chapter 8](08-brain-vs-ai.md). It assumes you've absorbed at least the [Story](The-Brain-Story.md) first.
+- **Need a specific number?** [Quick Reference (Appendix)](appendix-quick-reference.md).
 - **Stuck on a term?** Check the [Glossary](Glossary.md).
 
 ---

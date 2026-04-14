@@ -108,7 +108,7 @@ If it did, she fires a single electric spike — an **action potential** — tha
 
 If it didn't, she waits. The moment passes. No signal sent.
 
-That's it. That's what one neuron does. Billions of times a second, across a hundred billion neurons, this tiny decision — fire or don't fire? — is happening. And somehow, from that, consciousness emerges.
+That's it. That's what one neuron does. Billions of times a second, across 86 billion neurons, this tiny decision — fire or don't fire? — is happening. And somehow, from that, consciousness emerges.
 
 ### The spike
 
@@ -134,7 +134,9 @@ Nora just sent a message.
 
 Her message now needs to reach the next neuron. Call him Nate.
 
-Here's the strange part: **Nora's axon doesn't actually touch Nate's dendrite.** There's a tiny gap between them. A gap so small you could fit maybe three hundred of them across the width of a human hair. But it's a gap nonetheless.
+Here's the strange part: **Nora's axon terminal doesn't actually touch Nate's dendritic spine.** There's a tiny gap between them. A gap so small you could fit maybe three hundred of them across the width of a human hair. But it's a gap nonetheless.
+
+(Quick orientation: an *axon terminal* is the bulbous tip of one of Nora's many axon branches — the "post office" we mentioned in Chapter 2. A *dendritic spine* is one of the tiny mushroom-shaped bumps covering Nate's dendrites — Nate's antennas. Spines only ever appear on the receiving side of a synapse. They never connect to other spines directly.)
 
 How does the message cross?
 
@@ -149,7 +151,7 @@ When Nora's spike arrives at a terminal, a cascade of events unfolds in under a 
 3. Tiny bubbles inside the terminal — called **vesicles** — lurch toward the membrane. Each bubble contains roughly ten thousand molecules of a chemical called **glutamate**.
 4. The bubbles merge with the outer wall and burst, spilling their glutamate into the gap.
 5. The glutamate drifts across the gap. It doesn't take long — the gap is tiny.
-6. On the other side, on Nate's dendrite, special molecules called **receptors** are waiting. Glutamate fits into them like a key into a lock.
+6. On the other side, on Nate's dendritic spine, special molecules called **receptors** are waiting. Glutamate fits into them like a key into a lock.
 7. When the glutamate locks in, the receptors open small channels. Positive particles rush into Nate.
 8. Nate's charge nudges upward.
 
@@ -159,7 +161,7 @@ That's one "yes" vote, delivered.
 sequenceDiagram
     participant Nora as Nora's axon terminal
     participant Gap as The tiny gap<br/>(synapse)
-    participant Nate as Nate's dendrite
+    participant Nate as Nate's dendritic spine
 
     Nora->>Nora: Electrical spike arrives
     Nora->>Gap: Release glutamate<br/>(chemical)

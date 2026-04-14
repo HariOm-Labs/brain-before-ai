@@ -1,5 +1,11 @@
 # Chapter 9: Mental Models
 
+*Five compact analogies for holding everything you've learned in one place.*
+
+> 📍 *You've now seen the brain at every level — molecules, cells, circuits, chemistry, and the contrast with AI. That's a lot to hold in your head at once. This chapter doesn't add new content. It gives you **five reusable mental models** that compress the entire guide into images you can carry around. Pick whichever one fits the question you're trying to answer.*
+
+---
+
 Five useful analogies for thinking about what the brain is doing. Each captures a different aspect. Use whichever fits the question at hand.
 
 At a glance:
@@ -170,3 +176,7 @@ When someone learns F = ma, all five models apply simultaneously:
 - **City:** A new "F = ma building" goes up in the physics district, connected to existing roads.
 
 > Each model emphasizes a different aspect. They aren't mutually exclusive — they're complementary views of the same neural processes. Use whichever one best fits the question you're trying to answer.
+
+---
+
+> *We've covered the biology, the AI contrast, and the mental models. The remaining two chapters get practical. We've talked about sleep and forgetting in passing — but [Chapter 10](10-sleep-memory-forgetting.md) deepens that crucial second half of learning that happens overnight. Then [Chapter 11](11-applying-the-science.md) is the cash-out: ten study techniques that work because they match the biology.*

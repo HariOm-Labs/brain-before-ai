@@ -1,6 +1,6 @@
-# Chapter 10: Quick Reference
+# Quick Reference (Appendix)
 
-Look up numbers, timescales, formulas, and common questions quickly.
+*This isn't a narrative chapter — it's a back-of-book reference. Skip it on a first read; come back when you need to look up a specific number, timescale, equation, or common question.*
 
 ---
 

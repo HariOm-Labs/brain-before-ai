@@ -44,7 +44,7 @@ Popular culture has generated a lot of confident claims about the brain. Some ar
 
 **False.** This feels intuitive but is badly wrong.
 
-**What's actually true:** Memory is a *reconstruction*, not a replay. Every time you recall an event, your brain rebuilds it from fragments distributed across multiple regions, filling in gaps with plausible guesses. The act of remembering subtly rewrites the memory (see reconsolidation in [Chapter 11](11-sleep-memory-forgetting.md)).
+**What's actually true:** Memory is a *reconstruction*, not a replay. Every time you recall an event, your brain rebuilds it from fragments distributed across multiple regions, filling in gaps with plausible guesses. The act of remembering subtly rewrites the memory (see reconsolidation in [Chapter 10](10-sleep-memory-forgetting.md)).
 
 This is why:
 - Two people remember the same event differently.

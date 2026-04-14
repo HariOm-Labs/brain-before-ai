@@ -1,231 +1,210 @@
 # Chapter 1: The Biological Neuron
 
-## The neuron as a computational unit
+*A single brain cell is not a simple switch. It's a small self-contained computer — built from molecules, running on chemistry, capable of learning. This chapter introduces its shape, its parts, and how a signal travels through it.*
 
-A single neuron is not a simple switch. It's a sophisticated computational device with roughly 15 distinct structural components, each playing a critical role. Artificial neural networks model a neuron as a simple mathematical function (weighted sum → activation). Biological neurons are molecular computers with capabilities we're only beginning to understand.
+---
+
+## The brain's building blocks
+
+Before we zoom in on a single neuron, a quick framing.
+
+The brain is made of cells. Most of them fall into two categories:
+
+- **Neurons** — the cells that do the signaling and the computing. Roughly 86 billion of them. These are what this guide is about.
+- **Glia** — supporting cells that feed, insulate, clean up after, and protect neurons. Roughly as many as neurons, maybe slightly more. Important in real life, but we'll mostly set them aside here.
+
+When neuroscientists talk about "how the brain works," they almost always mean **networks of neurons connected by synapses**. Neurons are the fundamental building blocks — the Lego pieces from which thought, memory, learning, emotion, and everything else you experience is built.
+
+> **One brain** ≈ 86 billion neurons + 100 trillion synaptic connections between them.
+> **One neuron** = the subject of this chapter.
+
+Understand one neuron well, and the rest of the guide — how they communicate, how they learn, how intelligence emerges from their networks — builds naturally on top.
+
+---
+
+## What a neuron actually does
+
+A neuron has one job: **receive signals from other neurons, decide whether to fire, and pass the decision along.**
+
+That's it. Repeat this across 86 billion neurons connected by 100 trillion synapses, and you get everything from a heartbeat to a thought about Newton's second law.
+
+The interesting part is *how* a single neuron does this job. The short version: it's a three-zone device. One zone listens. One zone decides. One zone broadcasts.
 
 ---
 
 ## The shape of a neuron
 
-Before the components, here's the basic anatomy in one picture. Information flows **downward** through this diagram:
+```mermaid
+flowchart TD
+    subgraph INPUT["INPUT ZONE — listens"]
+        D1[Dendrites<br/>branching input network]
+        D2[Dendritic spines<br/>tiny bumps where synapses live]
+    end
 
-```
-          \  |  /  /  |  \            ← DENDRITES
-           \ | /  /   |   \             (input branches,
-            \|/ /     |    \            each dotted with
-         ___* *_______|_____\___        tiny "spines" that
-        |   \ /       |     /   |       receive signals)
-        |    X        |    /    |
-        |   / \       |   /     |
-         \_/___\______|__/______/
-                   |
-                ___|___
-               /       \
-              |   SOMA  |      ← CELL BODY (sums all
-              |  (cell  |         inputs; decides whether
-              |  body)  |         to "fire" a spike)
-               \___|___/
-                   |              ← AXON HILLOCK
-                   |                 (where the spike starts)
-                   |
-                   |  ← AXON (output wire)
-             ======|======       ← myelin insulation
-                   |                (speeds up the spike)
-             ======|======       ← Node of Ranvier
-                   |                (where spike regenerates)
-             ======|======
-                   |
-            ___ ___|___ ___
-           /   X   X   X   \    ← AXON TERMINALS
-          /    |   |   |    \      (tiny "post offices" that
-         *     *   *   *     *     release neurotransmitter
-              | |  | |  | |         into the next neuron)
-              ↓ ↓  ↓ ↓  ↓ ↓
-         (signals to other neurons)
+    subgraph DECIDE["DECISION ZONE — integrates"]
+        S[Soma<br/>sums all inputs<br/>fires if threshold is reached]
+        N[Nucleus<br/>handles long-term structural changes]
+    end
+
+    subgraph OUTPUT["OUTPUT ZONE — broadcasts"]
+        H[Axon hillock<br/>where the spike is born]
+        A[Axon<br/>the long wire<br/>wrapped in myelin insulation]
+        T[Axon terminals<br/>release neurotransmitter<br/>to the next neurons]
+    end
+
+    D1 --> D2 --> S
+    S --- N
+    S --> H --> A --> T
+
+    style INPUT fill:#e3f2fd,stroke:#1976d2
+    style DECIDE fill:#fff3e0,stroke:#f57c00
+    style OUTPUT fill:#f3e5f5,stroke:#7b1fa2
 ```
 
-Keep this picture in mind as we go through each component in detail.
+**Signal flow is one-way.** Dendrites receive. Soma decides. Axon transmits. Never the reverse. This one-way-ness is essential — it's how the brain maintains direction and coherence across billions of conversations happening at once.
+
+Now each zone in more detail.
 
 ---
 
-## A synapse, zoomed in
+## Zone 1 — the input zone (listening)
 
-If we take one of those axon terminals above and zoom in a thousand-fold, we see the actual meeting point between two neurons — the **synapse**:
+Dendrites are branching, tree-like structures reaching outward from the cell body. Each neuron has roughly 5–7 main branches, each splitting into 10–20 smaller ones. Together they form a receiving network dense enough to pick up thousands of signals from thousands of other neurons at once.
 
-```
-    ┌──────────────────────────────────┐
-    │      PRESYNAPTIC TERMINAL        │   ← sending neuron
-    │       (from sender neuron)       │
-    │                                  │
-    │     ● ● ●    ← vesicles          │
-    │    ● ● ● ●     (each holds       │
-    │     ● ● ●      ~10,000           │
-    │                neurotransmitter  │
-    │      ▼ ▼ ▼     molecules)        │
-    │   ┌─┘ │ │                        │
-    │   │  ┌┘ │   Ca²⁺ channels open → │
-    │   │  │  └─  vesicles fuse →      │
-    │   └──┴─┴──  contents released    │
-    ├──────────────────────────────────┤
-    │  ░ ░ ░ SYNAPTIC CLEFT ░ ░ ░     │   ← 20–40 nanometer gap
-    │   ░   ● ● neurotransmitter   ░   │     (the chemical step)
-    │  ░ ●   molecules diffusing   ░ ●  │
-    │   ░     ● across the gap     ░    │
-    ├──────────────────────────────────┤
-    │   ▲ ▲ ▲ ▲ ▲                      │
-    │   │ │ │ │ │                      │
-    │   R R R R R   ← receptors        │
-    │   │ │ │ │ │     (AMPA, NMDA)     │
-    │   └─┴─┴─┴─┘     on the spine     │
-    │                                  │
-    │   ┌──────────────┐               │
-    │   │ POSTSYNAPTIC │   ← receiving │
-    │   │   MEMBRANE   │     neuron    │
-    │   │ (dendritic   │               │
-    │   │    spine)    │               │
-    │   └──────────────┘               │
-    └──────────────────────────────────┘
+Covering those dendrites are **dendritic spines** — tiny mushroom-shaped bumps, each one a potential learning site. When you learn something, specific spines physically grow larger. When you forget, they shrink or disappear entirely. A typical cortical neuron has 2,000–5,000 of them.
 
-    Learning happens HERE.
-    A weak synapse has ~50 receptors.
-    A strong (learned) synapse has ~500.
-```
+Concrete evidence that this matters in real life:
+- **Musicians** have roughly 40% more spines in motor-cortex regions than non-musicians — the mark of years of specialized practice.
+- **London taxi drivers**, famous for having to memorize the city's 25,000 streets, develop visibly larger hippocampi (the brain's memory encoder).
 
-The entire drama of learning — strengthening, weakening, remembering, forgetting — happens at these tiny gaps. Full mechanism in [Chapter 3](03-synaptic-transmission.md).
+So every new skill or piece of knowledge you've ever learned — it lives on these tiny bumps, distributed across millions of neurons.
 
 ---
 
-## The 15 components
+## Zone 2 — the decision zone (deciding)
 
-### 1. Dendrites — the input network
-- **Structure:** 5–7 main branches per neuron, each branching 10–20 times into a tree-like arbor. Total surface area: ~10,000–20,000 µm².
-- **Function:** Receive input from thousands of other neurons. Each branch does *local* computation before sending signals to the soma. Not passive wires — active computing elements with voltage-gated channels that can generate dendritic spikes independently.
-- **Specialization:** Branches specialize over time. One branch may house physics knowledge while another houses language.
-- **Numbers:** ~12–15 primary dendrites, ~150–300 secondary branches, ~5,000–7,000 segments per pyramidal neuron.
+This is where arithmetic happens.
 
-### 2. Dendritic spines — learning sites
-- **Structure:** Tiny mushroom-shaped protrusions (1–2 µm long) emerging from dendrites. Each contains actin cytoskeleton, receptors (AMPA, NMDA), scaffolding proteins, sometimes mitochondria.
-- **Function:** Primary sites of learning. Each spine = one synapse = one learning unit. Narrow neck creates a biochemical compartment, so calcium signals stay confined to the individual spine.
-- **Plasticity:** New spines form in hours during learning. Stabilize over days-weeks. Musicians have ~40% more spines in motor cortex. London taxi drivers have enlarged hippocampi.
-- **Numbers:** 2,000–5,000 spines per cortical neuron. 5–15 spines per 10 µm of dendrite.
+In any given millisecond, thousands of signals arrive through the dendrites. Most are "yes" votes (pushing the neuron toward firing). Some are "no" votes. The **soma** — the cell body — sums them all, literally adding positive and negative voltages together, and checks a single threshold:
 
-### 3. Synapses — connection points
-- **Structure:** A three-part junction: presynaptic terminal, 20–40 nm synaptic cleft, postsynaptic density (a molecular machine containing ~1,000–2,000 proteins).
-- **Function:** Signal transmission point. Converts electrical → chemical → electrical. The chemical gap is what enables **modulation** — strengthening (LTP), weakening (LTD), or elimination.
-- **Types:** Glutamate (80–85%, excitatory), GABA (15–20%, inhibitory), modulator (<1%), peptide (rare).
-- **Strength range:** Weak synapse has ~50 AMPA receptors, strong has ~500 — a 10× range built through learning.
-- **Scale:** ~8,000–10,000 input synapses and 8,000–12,000 output synapses per neuron. Brain total: ~100 trillion synapses.
+> **If the total voltage crosses –55 millivolts, the neuron fires.**
+> Otherwise, it stays silent and waits for more input.
 
-### 4. Soma (cell body) — integration center
-- **Structure:** 10–30 µm diameter. Contains nucleus plus all cellular machinery. Membrane studded with ion channels, receptors, pumps, and transporters.
-- **Function:** **Global integration.** Sums all dendritic inputs (thousands of EPSPs and IPSPs arriving millisecond-by-millisecond). If voltage reaches threshold (–55 mV), triggers an action potential. This is THE computational decision: fire or don't fire.
-- **Membrane properties:** Resting potential –70 mV (maintained by Na⁺/K⁺ pump). Time constant 10–30 ms.
-- **Key point:** Real-time computation happens here (milliseconds). The nucleus does NOT compute — it does gene expression (hours-days).
+That's the entire decision. Fire or don't fire. A 2-millisecond electrical spike travels down the axon, or nothing happens.
 
-### 5. Nucleus — long-term control
-- **Structure:** 6–10 µm sphere containing DNA (3 billion base pairs), transcription machinery.
-- **Function:** **Long-term structural changes** via gene expression. Repeated learning triggers CREB (a transcription factor), which turns on genes for AMPA receptors, scaffolding proteins, and actin.
-- **Timeline:** Immediate early genes activate within 15–30 min. Structural proteins 2–4 hours later. Protein synthesis 4–12 hours. Physical spine growth visible after 12–24 hours. **This is why sleep matters** — gene expression and protein synthesis happen during sleep.
-- **Critical distinction:** The nucleus responds to *patterns* of activity by changing gene expression. It doesn't do real-time computation.
-
-### 6. Axon — output cable
-- **Structure:** A single long projection. Length from 0.1 mm (local interneurons) up to over 1 meter (motor neurons to the foot). Diameter 0.2–20 µm.
-- **Function:** Carries action potentials from soma to terminals at 0.5–2 m/s (unmyelinated) up to 80–120 m/s (myelinated). Signals propagate without loss — spikes regenerate at each point.
-- **Axon hillock:** The initiation site for action potentials. Has the lowest threshold and highest density of voltage-gated Na⁺ channels (50–100/µm²).
-- **Transport:** Axon can't make proteins locally. Kinesin (forward) and dynein (back) transport cargo along microtubules at 1–400 mm/day.
-
-### 7. Myelin sheath — insulation for speed
-- **Structure:** Fatty wrapping formed by oligodendrocytes (CNS) or Schwann cells (PNS). 200–1000 µm segments separated by 1–2 µm Nodes of Ranvier.
-- **Function:** Speeds up propagation 10–100× via **saltatory conduction** — the spike "jumps" between nodes rather than propagating continuously.
-- **Why it matters:** Without myelin, a signal across 15 cm of human cortex would take 150–300 ms. With myelin: 2–8 ms.
-- **Development:** Continues through age 20–25. Prefrontal cortex myelinates last — this is partly why teenagers have "slower" impulse control.
-- **Disease:** Multiple sclerosis is myelin degradation — signals slow or fail.
-
-### 8. Axon terminals — transmission sites
-- **Structure:** Bulbous endings (0.5–2 µm) at axon tips. Each contains 100–200 synaptic vesicles, active zones (release sites), voltage-gated Ca²⁺ channels, mitochondria (20–40% of terminal volume).
-- **Function:** Neurotransmitter release. When an action potential arrives: terminal depolarizes → Ca²⁺ channels open → Ca²⁺ floods in → vesicles fuse with membrane → 5,000–10,000 neurotransmitter molecules released into the cleft. Total time: 0.5–1 ms.
-- **Orphan terminals:** ~15–25% of terminals are "orphans" — they exist but aren't currently forming functional synapses. This is reserve capacity for future learning.
-
-### 9. Ion channels — molecular switches
-- **Types:** Voltage-gated (open based on voltage), ligand-gated (open when neurotransmitter binds), leak (always open).
-- **Key channels:** Na⁺ (upstroke of action potential), K⁺ (repolarization), Ca²⁺ (triggers neurotransmitter release and learning), Cl⁻ (inhibition via GABA).
-- **Na⁺ channel details:** Opens at –55 mV (in 0.1 ms), inactivates at +30 mV (in 0.5 ms). The inactivation creates the refractory period (1–2 ms), which limits firing rate to ~500–1000 Hz.
-- **Scale:** ~10–100 million ion channels per neuron. Each channel passes 1–10 million ions per second when open.
-
-### 10. Neurotransmitters — chemical messengers
-- **Glutamate:** Main excitatory transmitter (80–85% of synapses). Removed from cleft by astrocyte transporters.
-- **GABA:** Main inhibitory transmitter (15–20%). Opens Cl⁻ channels → hyperpolarization.
-- **Modulators:** Dopamine (reward), acetylcholine (attention), norepinephrine (arousal), serotonin (mood). Fewer than 1% of neurons but project widely — one dopamine neuron can influence 100,000+ cortical neurons. ([Chapter 6](06-neuromodulation.md) covers these in depth.)
-- **Release quantal:** Each vesicle = 5,000–10,000 molecules = one "quantum". Weak synapse releases 0–1 quanta; strong synapse releases 5–10.
-
-### 11. Receptors — signal catchers
-- **Ionotropic** (fast, 1–5 ms): ligand-gated ion channels like AMPA, NMDA, GABA-A.
-- **Metabotropic** (slow, 10–100 ms, can last minutes): G-protein coupled. Most modulator receptors are metabotropic.
-- **AMPA receptors:** Glutamate-gated Na⁺ channels. 50–500 per synapse. **This is what changes during learning** — more AMPA = stronger synapse.
-- **NMDA receptors:** Glutamate-gated Ca²⁺ channels — but require BOTH glutamate AND depolarization (Mg²⁺ block removed by voltage). This makes them **coincidence detectors** — the molecular implementation of Hebb's law. (Covered in detail in [Chapter 4](04-learning-mechanisms.md).)
-
-### 12. Mitochondria — power plants
-- Generate ATP via oxidative phosphorylation. Each glucose → 30–32 ATP.
-- ATP powers: Na⁺/K⁺ pump (40% of brain ATP), Ca²⁺ pumps, neurotransmitter synthesis, protein synthesis.
-- Concentrated at axon terminals (20–40% of volume), Nodes of Ranvier, and active dendritic spines.
-- Brain uses 20% of body's energy despite being 2% of weight — ~20 Watts.
-
-### 13–15. Supporting structures
-- **Endoplasmic reticulum:** Rough ER makes proteins; smooth ER handles Ca²⁺ storage. Expands in dendrites during learning.
-- **Cytoskeleton:** Microtubules (transport highways), neurofilaments (structure), actin (dynamic, critical in spines). Blocking actin blocks learning.
-- **Motor proteins:** Kinesin, dynein, myosin — the delivery trucks.
+Sitting inside the soma is the **nucleus** — the cell's DNA-containing control center. One important clarification: the nucleus is *not* where real-time decisions happen. That's the soma's membrane, working on a millisecond timescale. The nucleus handles the much slower work — gene expression and protein synthesis for long-term structural changes, operating on a timescale of hours to days. This distinction matters for understanding learning (and is revisited in [Chapter 4](04-learning-mechanisms.md)).
 
 ---
 
-## The complete information flow
+## Zone 3 — the output zone (broadcasting)
 
-Here's how a signal travels through a single neuron, end to end:
+Once the soma decides to fire, the spike has to travel. The output zone is built for speed.
 
-### Phase 1: Input reception (dendrites & spines)
-1. Presynaptic terminal releases glutamate (5,000–10,000 molecules).
-2. Glutamate diffuses across the 20–40 nm cleft in 0.1–0.5 ms.
-3. Binds AMPA receptors on a dendritic spine.
-4. Na⁺ flows in → spine depolarizes by +5 to +15 mV (the EPSP).
-5. EPSP spreads through spine neck → dendrite shaft, attenuating with distance.
+The spike starts at the **axon hillock**, a small junction between the soma and the axon. The hillock has the lowest firing threshold and the highest density of voltage-gated sodium channels in the whole neuron — which is why spikes reliably ignite there first.
 
-**Local dendritic computation:** Multiple spines on the same branch sum their EPSPs. If the local sum is large enough, the branch generates a *dendritic spike* that amplifies the signal. Different branches compute independently — like multi-core processing.
+From the hillock, the spike travels down the **axon**, a single long fiber. Axons can be microscopic (a local connection within the cortex) or over a meter long (a motor neuron reaching from your spinal cord to your toe). Remarkably, the spike regenerates itself at every point along the axon, so it arrives at the far end at full strength.
 
-### Phase 2: Global integration (soma)
-The soma performs a weighted sum:
+Most long axons are wrapped in **myelin**, a fatty insulation that dramatically speeds things up. Without myelin, a signal across your 15 cm cortex would take 150–300 milliseconds. With myelin, 2–8 milliseconds. It's the difference between thinking in real time and not. (This is also why multiple sclerosis, which destroys myelin, is so debilitating.)
+
+At the end of the axon sit **axon terminals** — tiny "post offices" where the signal hands off to the next neuron. A single neuron can have thousands of these terminals, reaching thousands of other neurons. This is how one decision becomes many.
+
+---
+
+## Zoom in: the synapse
+
+When the signal reaches a terminal, it has to cross a tiny gap to reach the next neuron. That gap is called a **synapse**, and it's where most of the interesting drama in the brain happens.
+
+```mermaid
+flowchart TD
+    subgraph PRE["PRESYNAPTIC TERMINAL — sender"]
+        V[Vesicles holding<br/>neurotransmitter<br/>~10,000 molecules each]
+    end
+
+    subgraph CLEFT["SYNAPTIC CLEFT — 20–40 nm gap"]
+        NT[Neurotransmitter diffuses across]
+    end
+
+    subgraph POST["POSTSYNAPTIC SPINE — receiver"]
+        R1[AMPA receptors<br/>~50 on weak synapse<br/>~500 on strong one]
+        R2[NMDA receptors<br/>detect when both neurons<br/>fire together = LEARNING]
+    end
+
+    V -->|spike arrives<br/>triggers release| NT
+    NT -->|binds receptors<br/>in under 1 ms| R1
+    NT --> R2
+    R1 -->|positive ions flow in<br/>signal continues| NEXT[Next neuron's soma]
+
+    style PRE fill:#ffebee,stroke:#c62828
+    style CLEFT fill:#fff9c4,stroke:#f9a825
+    style POST fill:#e8f5e9,stroke:#2e7d32
 ```
-V(soma) = V(rest) + Σ(EPSPs) − Σ(IPSPs)
-```
-- Integration window: 10–30 ms.
-- Near inputs have more influence than distal ones.
-- If V ≥ –55 mV → fire.
 
-**Example:** Start at –70 mV. 500 weak synapses distributed over 20 ms contribute +15 mV. 100 inhibitory synapses subtract 5 mV. Final: –60 mV. Below threshold — doesn't fire. One more good input (+5 mV) and it would.
+The gap is 20–40 nanometers wide — so small you could fit hundreds of them across the width of a human hair. Yet that gap is the single most important feature of biological intelligence.
 
-### Phase 3: Action potential initiation (axon hillock)
-- Threshold reached at –55 mV.
-- Na⁺ channels open (the axon hillock has the densest concentration in the neuron).
-- Na⁺ floods in: voltage shoots to +40 mV in 0.5 ms.
-- Self-propagating wave travels down the axon.
+**Why a gap matters:** if neurons were hardwired electrically, connection strengths would be fixed forever. Because there's a chemical gap, and because the number of receptors on the receiving side can change, **connections can strengthen or weaken with experience.** That is learning, at its physical root.
 
-### Phase 4: Propagation (axon & myelin)
-- **Unmyelinated:** Continuous regeneration, 0.5–2 m/s.
-- **Myelinated:** Saltatory conduction — spike jumps node-to-node at 10–120 m/s.
+A weak synapse might have 50 AMPA receptors. A strong, well-learned synapse can have 500 — a 10× range built entirely through experience. Full mechanism in [Chapter 3](03-synaptic-transmission.md).
 
-### Phase 5: Terminal activation & release
-- AP arrives at terminal → Ca²⁺ channels open.
-- Ca²⁺ floods in (10,000× gradient!).
-- Vesicles fuse via the SNARE complex.
-- Neurotransmitter spills into cleft.
-- Total time from AP arrival to next-neuron binding: 0.5–1 ms.
+---
 
-### Phase 6: Cycle repeats
-The receiving neuron becomes the sending neuron for the next step in the chain. One thought involves millions of these cycles happening in coordinated patterns across the brain.
+## The complete signal flow in six steps
+
+Here's what happens when a signal travels through one neuron, beginning to end:
+
+1. **Neurotransmitter arrives** at a dendritic spine, released by the previous neuron.
+2. **Receptors open** — positive ions flow in, creating a small voltage bump at the spine.
+3. **Bumps sum at the soma.** Excitatory bumps add up. Inhibitory bumps subtract.
+4. **Threshold check** — if the total crosses –55 mV, the axon hillock ignites.
+5. **Spike races down the axon** — jumping between nodes in the myelin, reaching terminals in milliseconds.
+6. **Release at terminals** — calcium rushes in, vesicles fuse, neurotransmitter spills across the gap. The next neuron begins its own version of step 1.
+
+One full cycle: about 1–2 milliseconds.
+One thought: millions of these cycles happening simultaneously across many neurons.
+
+---
+
+## Supporting infrastructure
+
+Beyond the three zones, a neuron has parts that keep everything running but don't carry signal directly. These come up throughout the guide:
+
+- **Ion channels** — molecular gates that let specific ions flow. They decide when a neuron fires.
+- **Neurotransmitters** — chemical messengers. Glutamate excites (80% of synapses). GABA inhibits (15%). Modulators like dopamine tune the system (<1%).
+- **Receptors** — lock-and-key proteins that catch neurotransmitters. AMPA and NMDA are the two you'll hear about most.
+- **Mitochondria** — cellular power plants. The brain uses roughly 20% of your body's energy despite being only 2% of its weight.
+- **Cytoskeleton and motor proteins** — internal scaffolding plus a delivery system for proteins. Essential for spine growth during learning.
+
+Each of these deserves a chapter of its own. This one gives you the map; later chapters fill in the details.
+
+---
+
+## Quick-reference numbers
+
+For readers who want specifics, here's everything in one table. Skip if you don't care.
+
+| Quantity | Value |
+|----------|-------|
+| Total neurons in the brain | ~86 billion |
+| Total synapses | ~100 trillion |
+| Resting voltage of a neuron | −70 mV |
+| Firing threshold | −55 mV |
+| Peak of a firing spike | +40 mV |
+| Duration of one spike | 1–2 ms |
+| Typical firing rate | 5–50 Hz (max ~1000 Hz) |
+| Spike speed, myelinated axon | 10–120 m/s |
+| Spike speed, unmyelinated axon | 0.5–2 m/s |
+| Synaptic gap width | 20–40 nanometers |
+| Neurotransmitter molecules per vesicle | 5,000–10,000 |
+| AMPA receptors on a weak synapse | ~50 |
+| AMPA receptors on a strong synapse | ~500 |
+| Spines per typical cortical neuron | 2,000–5,000 |
+| Brain's energy usage | ~20 W (20% of body total) |
 
 ---
 
 ## Key takeaway
 
-> Every thought, every memory, every moment of understanding involves billions of precisely-timed molecular events. When you learn something new, thousands of neurons synchronize this process, strengthen their connections via the calcium cascade, synthesize new proteins, and permanently change your brain's physical structure.
+> A neuron is a small computer with a listening zone, a deciding zone, and a broadcasting zone. It runs on ion gradients, receives signals as chemicals, transmits them as electricity, and translates back to chemicals at each gap.
 >
-> **Knowledge is not a metaphor. It is a pattern of strong synaptic connections, physically distributed across multiple brain regions.**
+> Everything about how you think, feel, and learn — from recognizing a face to solving a physics problem — is this process, happening billions of times per second across trillions of connections.
+>
+> Most importantly: **your knowledge is not stored *in* the brain. It *is* the brain.** It's the physical pattern of which synapses are strong, which spines have grown, which connections have formed. Change the pattern, and you've changed yourself.

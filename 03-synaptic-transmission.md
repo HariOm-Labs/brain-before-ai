@@ -1,4 +1,4 @@
-# Chapter 3: Synaptic Transmission
+# Chapter 3: How a Signal Crosses Between Neurons
 
 *The tiny chemical gap that lets you learn anything at all.*
 

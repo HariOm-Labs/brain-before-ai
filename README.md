@@ -75,12 +75,12 @@ The narrative chapters tell one continuous story. Each one ends with a bridge to
 
 | # | Chapter | Read | What you'll learn |
 |---|---------|------|-------------------|
-| 1 | [The Biological Neuron](01-biological-neuron.md) | ~12 min | The building blocks: what a single neuron is and how signal flows through it |
-| 2 | [Neural Communication](02-neural-communication.md) | ~10 min | How action potentials work — the 6-phase electrical spike |
-| 3 | [Synaptic Transmission](03-synaptic-transmission.md) | ~10 min | The 9-step handoff between neurons — electrical → chemical → electrical |
+| 1 | [Inside a Single Brain Cell](01-biological-neuron.md) | ~12 min | The building blocks: what a single neuron is and how signal flows through it |
+| 2 | [How a Brain Cell Sends a Signal](02-neural-communication.md) | ~10 min | How action potentials work — the 6-phase electrical spike |
+| 3 | [How a Signal Crosses Between Neurons](03-synaptic-transmission.md) | ~10 min | The 9-step handoff between neurons — electrical → chemical → electrical |
 | 4 | [Learning Mechanisms](04-learning-mechanisms.md) | ~15 min | How neurons physically change when you learn (Hebb's law, NMDA, LTP) |
-| 5 | [Computational Hierarchy](05-computational-hierarchy.md) | ~8 min | Why one biological neuron is more powerful than an entire artificial one |
-| 6 | [Neuromodulation Systems](06-neuromodulation.md) | ~10 min | How dopamine, acetylcholine, norepinephrine, and serotonin act as "knobs" |
+| 5 | [The Hidden Depth of a Single Neuron](05-computational-hierarchy.md) | ~8 min | Why one biological neuron is more powerful than an entire artificial one |
+| 6 | [The Chemicals That Decide What You Remember](06-neuromodulation.md) | ~10 min | How dopamine, acetylcholine, norepinephrine, and serotonin act as "knobs" |
 | 7 | [Understanding & Intelligence](07-understanding-intelligence.md) | ~18 min | The real difference between learning, knowledge, understanding, and intelligence |
 
 ### 🤖 Part 2 — The AI contrast (chapter 8)

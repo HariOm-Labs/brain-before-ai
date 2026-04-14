@@ -1,4 +1,4 @@
-# Chapter 1: The Biological Neuron
+# Chapter 1: Inside a Single Brain Cell
 
 *The single building block of every thought you've ever had.*
 

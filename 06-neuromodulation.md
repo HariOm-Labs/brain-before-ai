@@ -1,4 +1,4 @@
-# Chapter 6: Neuromodulation Systems
+# Chapter 6: The Chemicals That Decide What You Remember
 
 *Why the same study session, on two different days, can produce completely different results.*
 

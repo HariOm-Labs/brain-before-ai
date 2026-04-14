@@ -67,7 +67,7 @@ All five process in parallel, then results reconverge in prefrontal cortex for i
 
 ---
 
-(Deep dive: [Chapter 6 — Neuromodulation](06-neuromodulation.md) and [Chapter 7 — Understanding & Intelligence](07-understanding-intelligence.md).)
+(Deep dive: [Chapter 6 — The Chemicals That Decide What You Remember](06-neuromodulation.md) and [Chapter 7 — Understanding & Intelligence](07-understanding-intelligence.md).)
 
 ## Model 2: Chemical and network knobs
 

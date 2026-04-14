@@ -1,4 +1,4 @@
-# Chapter 5: Computational Hierarchy
+# Chapter 5: The Hidden Depth of a Single Neuron
 
 *Why one biological neuron is more powerful than an entire artificial one — and what that means for AI.*
 

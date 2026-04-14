@@ -1,4 +1,4 @@
-# Chapter 2: Neural Communication
+# Chapter 2: How a Brain Cell Sends a Signal
 
 *The 2-millisecond electrical spike that carries every thought you've ever had.*
 

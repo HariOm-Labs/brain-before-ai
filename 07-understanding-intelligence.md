@@ -176,6 +176,46 @@ What she **can** do:
 
 Same starting equation. Vastly different network density. **That density is what we call understanding.**
 
+Visualized as actual networks:
+
+```
+   STUDENT A — KNOWS F = ma                 STUDENT B — UNDERSTANDS F = ma
+   (isolated knowledge island)              (richly connected web)
+
+
+              ●────●                              ●─────●─────●
+              │    │                             ╱│    ╱│    ╱│
+              ●  F=ma ●                         ● │   ● │   ● │
+              │    │                            │ │   │ │   │ │
+              ●────●                            ● │   F=ma │  ●
+                                                │ ╲   │  ╲   │
+              isolated:                         │  ●──┼───●──●
+              ~5,000                            │  │  │  │  │
+              synapses                          ●──●──●──●──●
+              few connections                       │  │  │
+              to other concepts                     ●──●──●
+
+                                                 connected:
+                                                 ~40,000 synapses
+                                                 cross-linked to:
+                                                 - examples (cart, car)
+                                                 - related concepts
+                                                   (momentum, energy)
+                                                 - intuitions
+                                                 - applications
+                                                 - personal memories
+
+   ────────────────────────────────────────────────────────────────
+   Can recall the formula.                  Can navigate to any related
+   Can plug in numbers on a test.           concept in 2-3 hops.
+   Can't explain WHY it's true.             Can explain in multiple ways.
+   Can't apply to novel problems.           Can apply to new situations.
+   Forgotten easily.                        Hard to forget — many cues
+                                            can retrieve it.
+```
+
+The two networks contain similar starting concepts — but the difference in *connectivity density* changes everything about what the student can do with the knowledge.
+
 ### The "aha!" moment, explained
 
 You've been studying F = ma for weeks. You can recite it, solve textbook problems — but something feels mechanical, like you're following recipes you don't fully see.
@@ -191,6 +231,37 @@ During sleep, the brain quietly consolidated and **cross-linked** them. New syna
 The next time you encountered the equation, all the related networks fired together. An integration neuron in your prefrontal cortex — one that had been receiving partial input from several pathways for weeks, slowly creeping toward its firing threshold — finally crossed the line. **It fired.**
 
 You experienced that moment as the "aha." Subjectively, it felt like sudden insight. Objectively, it was the moment your network finished building enough cross-links to integrate.
+
+Visualized as before and after:
+
+```
+   BEFORE THE AHA MOMENT                     AFTER THE AHA MOMENT
+   (weeks of partial learning)               (the night the bridges hit
+                                              critical density)
+
+
+      ●●●                ●●●                       ●●●━━━━━━━━━●●●
+      ●F=ma●             ●examples●                ●F=ma●━━━━━●examples●
+      ●●●                ●●●                       ●●●╲   ╱   ●●●
+                                                       ╲ ╱
+                                                        ●
+       ●●●                ●●●                       ●●●╱ ╲   ●●●
+      ●concepts●         ●applications●             ●concepts●━━●applications●
+       ●●●                ●●●                       ●●●━━━━━━━━━●●●
+
+   Each topic strengthened                    New synapses formed between
+   on its own — but isolated.                 the previously separate
+   No bridges yet.                            networks. Now they all
+                                              fire together.
+   Subjective feel:                           Subjective feel:
+   "I can recite this but                     "Wait — it CLICKS now!"
+    something feels mechanical."
+
+   ─────────────────────────────────────────────────────────────────
+   The aha moment is your conscious experience of network integration.
+   The bridges had been forming during sleep for weeks.
+   They just finally hit the threshold to fire together.
+```
 
 Understanding is the conscious experience of network integration.
 
@@ -223,6 +294,52 @@ Two people can know exactly the same facts and have wildly different intelligenc
 - In one year: learns 250 new concepts. 2.5× growth.
 
 After one year, Person A has **overtaken Person B** in both knowledge AND understanding. Intelligence compounds.
+
+Plotted over time:
+
+```
+   Knowledge
+   ▲
+   │                                                  ★ Person A
+   │                                                ╱      ends with
+   │                                              ╱        ~1010 concepts
+1000┤                                            ╱
+   │                                          ╱
+   │                                        ╱
+   │                                      ╱
+ 750┤                                    ╱
+   │                                  ╱
+   │                                ╱
+   │                              ╱
+ 500┤                            ╱
+   │                          ╱
+   │                        ╱
+   │                      ╱
+ 250┤                    ╱─────────────────────────●  Person B
+   │                  ╱                              ends with
+   │                ╱       (linear-ish growth        ~350 concepts
+   │              ╱          ~250 new/year)
+ 100┤────────────●  ●  ●
+   │  Person B starts with 100
+   │
+  10┤●  Person A starts with 10
+   │
+    └──┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────►
+       0     1     2     3     4     5     6     7     8     9   months
+
+   Person A: low starting knowledge, high intelligence
+   Person B: high starting knowledge, lower intelligence
+
+   At month 0:  Person B is ahead by 90 concepts.
+   At month 4:  They cross over.
+   At month 12: Person A is ahead by 660 concepts.
+
+   Why? Person A's intelligence acts as a multiplier on every
+   new concept learned. The advantage compounds. By year 2,
+   the gap is dramatic.
+```
+
+This is why **intelligence compounds**. Two people putting in the same effort, on the same material, can end up at dramatically different distances along the hierarchy — not because one tried harder, but because efficiency multipliers stack year over year.
 
 ### What determines intelligence
 

@@ -62,6 +62,46 @@ Three categories. Each contains things current AI simply has no equivalent for.
 
 > *Each of these gaps is an active research area — continual learning for plasticity, neuromorphic chips (Intel Loihi, IBM TrueNorth) for biological-style spiking computation, embodied AI and robotics for grounding, mechanistic interpretability for borrowing tools from neuroscience to understand AI. None has matured into a deployed mainstream system yet, but the gaps aren't being ignored. Knowing what they are means you'll recognize the breakthrough when it actually arrives.*
 
+Here's the whole 5%/95% picture in one view:
+
+```
+┌──────────────────────────┬────────────────────────────────────────────┐
+│  ✅ WHAT AI CAPTURES (5%)│   ❌ WHAT AI OMITS (95%)                   │
+├──────────────────────────┼────────────────────────────────────────────┤
+│                          │                                            │
+│  Networks of units       │  MOLECULAR & CELLULAR                      │
+│  with weighted           │  • Chemical signaling (neurotransmitters)  │
+│  connections             │  • Temporal dynamics (refractory periods)  │
+│                          │  • Gene expression / protein synthesis     │
+│  Activation              │  • Metabolic constraints (20W budget)      │
+│  functions               │                                            │
+│                          │                                            │
+│  Gradient descent /      │  ARCHITECTURAL                             │
+│  backpropagation         │  • Dendritic computation (Level 1)         │
+│                          │  • Neuromodulation (4 chemical knobs)      │
+│  Hierarchical            │  • Continuous plasticity (always learning) │
+│  representations         │                                            │
+│  (V1→V2→V4→IT-ish)       │                                            │
+│                          │  HIGHER-LEVEL                              │
+│                          │  • Embodiment (concepts grounded in body)  │
+│                          │  • Genuine intrinsic motivation            │
+│                          │  • Common sense from being alive           │
+│                          │                                            │
+│  ────────                │  ────────                                  │
+│  Useful enough to:       │  Means AI can't:                           │
+│  • Translate languages   │  • Learn during deployment                 │
+│  • Generate images       │  • Reason about everyday physics           │
+│  • Recognize objects     │  • Adapt continuously like a brain does    │
+│  • Beat humans at games  │  • Recover gracefully from new contexts    │
+│                          │  • Be conscious in the way animals are     │
+│                          │                                            │
+└──────────────────────────┴────────────────────────────────────────────┘
+
+   The 5% explains why current AI works so well within its training.
+   The 95% explains why it falls down outside that distribution —
+   and why "more compute" alone won't close the gap.
+```
+
 ---
 
 ## The single biggest gap: training vs inference

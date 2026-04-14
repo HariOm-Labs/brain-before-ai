@@ -28,9 +28,79 @@ Alongside the information flowing through your brain at any moment, another set 
 
 Modulators are surprisingly few. Out of your 86 billion neurons, fewer than **one in a thousand** make modulator chemicals. But each of those neurons projects widely — a single dopamine neuron can influence a hundred thousand others. So a tiny population of cells, deep in the brainstem and midbrain, controls what billions of cortical neurons treat as important.
 
+Visualized — tiny source, vast reach:
+
+```
+                ┌─────────────────────────────────┐
+                │       CORTEX (the big stuff)    │
+                │                                 │
+                │   Billions of neurons —         │
+                │   the seeing, deciding,         │
+                │   remembering, thinking         │
+                │                                 │
+                │   ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲   │
+                │   │ │ │ │ │ │ │ │ │ │ │ │ │   │
+                │   │ │ │ │ │ │ │ │ │ │ │ │ │   │
+                │   │ │ │ │ │ │ │ │ │ │ │ │ │   │
+                │   ◄─── projections ───────►    │
+                │   (each modulator neuron       │
+                │    reaches ~100,000 targets)   │
+                └────────────┬────────────────────┘
+                             │
+                             │  modulator chemicals
+                             │  shower upward
+                             │
+                ┌────────────┴────────────┐
+                │   BRAINSTEM + MIDBRAIN  │
+                │                         │
+                │   Dopamine    ●●●  (~400K neurons)
+                │   ACh         ●●●  (~300K neurons)
+                │   Norepinephrine ●●  (~50K neurons)
+                │   Serotonin   ●●●  (~250K neurons)
+                │                         │
+                │   Total: ~1 million neurons
+                │   (out of 86 billion — that's
+                │    1 in 86,000 of your neurons)
+                └─────────────────────────┘
+
+   Tiny source, vast reach. A handful of cells decide
+   what billions of cortical neurons treat as important.
+```
+
 You're born with these systems pre-built. You don't have to learn how to use dopamine — it just works. What changes during your life is the *content* (the glutamate networks encoding F = ma, your mother's face, how to ride a bike). The modulator systems are the unchanging tools that shape what gets saved into that content.
 
-There are four big ones. Let's meet each.
+There are four big ones. Here they are at a glance — then we'll meet each in detail:
+
+```
+┌──────────────────┬──────────────────┬──────────────────┬──────────────────┐
+│   🎯 DOPAMINE    │   🔍 ACETYLCHOLINE│   ⚡ NOREPINEPHRINE│   🧘 SEROTONIN  │
+│                  │                  │                  │                  │
+│  "this matters"  │   "focus here"   │    "wake up"     │  "stay with it"  │
+│                  │                  │                  │                  │
+│  The reward tag. │  The attention   │  The alertness   │  The patience    │
+│  Marks synapses  │  sharpener.      │  baseline.       │  chemistry.      │
+│  for memory.     │  Quiets noise,   │  Sets how        │  Tolerance for   │
+│                  │  amplifies the   │  responsive your │  confusion and   │
+│                  │  signal you're   │  whole brain     │  repeated        │
+│                  │  attending to.   │  is right now.   │  failure.        │
+│                  │                  │                  │                  │
+│  Felt as:        │  Felt as:        │  Felt as:        │  Felt as:        │
+│  the spark of    │  the room going  │  snapping to     │  willingness to  │
+│  *yes!*          │  quiet around    │  full alert      │  try one more    │
+│                  │  a hard book     │                  │  attempt         │
+│                  │                  │                  │                  │
+│  Boosted by:     │  Boosted by:     │  Boosted by:     │  Boosted by:     │
+│  curiosity,      │  single-tasking, │  light exercise, │  good sleep,     │
+│  reward,         │  no distractions │  morning light   │  outdoor time,   │
+│  meaning         │                  │                  │  exercise        │
+│                  │                  │                  │                  │
+│  Crashed by:     │  Crashed by:     │  Crashed by:     │  Crashed by:     │
+│  boredom, dread  │  multitasking    │  exhaustion OR   │  chronic stress, │
+│                  │                  │  too much caffe. │  poor sleep      │
+└──────────────────┴──────────────────┴──────────────────┴──────────────────┘
+```
+
+Now meet each one in depth.
 
 ---
 

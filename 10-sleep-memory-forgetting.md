@@ -24,6 +24,54 @@ This chapter is about that second half — and about its mirror image, forgettin
 
 When people say "memory," they often mean one specific kind. But the brain has at least four distinct memory systems, each with its own mechanisms, its own timescales, and its own failure modes.
 
+The four at a glance:
+
+```
+┌────────────────┬────────────────┬────────────────┬────────────────┐
+│  WORKING       │  SHORT-TERM    │  LONG-TERM     │  LONG-TERM     │
+│  MEMORY        │  MEMORY        │  DECLARATIVE   │  PROCEDURAL    │
+├────────────────┼────────────────┼────────────────┼────────────────┤
+│                │                │                │                │
+│  Lasts:        │  Lasts:        │  Lasts:        │  Lasts:        │
+│  seconds       │  minutes-hours │  days-lifetime │  lifetime      │
+│                │                │                │                │
+│  Lives in:     │  Lives in:     │  Lives in:     │  Lives in:     │
+│  prefrontal    │  hippocampus   │  cortex        │  motor cortex, │
+│  cortex        │  (temporary)   │  (permanent)   │  cerebellum,   │
+│                │                │                │  basal ganglia │
+│                │                │                │                │
+│  Capacity:     │  Capacity:     │  Capacity:     │  Capacity:     │
+│  3-9 items     │  hundreds of   │  effectively   │  effectively   │
+│  (tiny!)       │  recent items  │  unlimited     │  unlimited     │
+│                │                │                │                │
+│  Examples:     │  Examples:     │  Examples:     │  Examples:     │
+│  • Phone # you │  • Name from a │  • Paris is    │  • Riding a    │
+│    just heard  │    party last  │    France's    │    bike        │
+│  • Active      │    night       │    capital     │  • Touch       │
+│    thought     │  • Today's     │  • Your wedd-  │    typing      │
+│  • What you're │    lecture     │    ing day     │  • Playing an  │
+│    holding in  │  • New concept │  • Calculus    │    instrument  │
+│    mind right  │    just read   │    rules                       │
+│    now         │                │                │                │
+│                │                │                │                │
+│  Fragility:    │  Fragility:    │  Fragility:    │  Fragility:    │
+│  total —       │  high — most   │  slow decay    │  remarkably    │
+│  a phone       │  gone by       │  unless        │  durable —     │
+│  call wipes    │  tomorrow      │  reviewed      │  decades of    │
+│  it            │  unless        │                │  disuse and    │
+│                │  consolidated  │                │  it still      │
+│                │                │                │  comes back    │
+│                │                │                │                │
+└────────────────┴────────────────┴────────────────┴────────────────┘
+
+   Crucially: these systems can be INDEPENDENTLY damaged.
+   The most famous case (H.M.) lost all declarative memory after
+   his hippocampus was removed — but his procedural memory was fine.
+   He could learn new motor skills without remembering practicing them.
+```
+
+Now meet each in detail.
+
 ### Working memory (seconds)
 What you're holding in mind *right now*. The prefrontal cortex keeps a small handful of items (3–9) firing continuously so you can manipulate them. Capacity is tiny. Fragility is total — a phone call wipes it. This is what you use to dial a number you just heard, before you've memorized it.
 
@@ -61,6 +109,43 @@ This is why **the first half of the night** matters most for fact-based learning
 During REM, the brain does something subtler: it **integrates** new material with existing knowledge. Connections form between the day's new learning and older, related memories. Emotional content gets processed. Patterns that weren't obvious while awake sometimes surface in dreams.
 
 This is why **the second half of the night** matters for creativity, problem-solving, and skill consolidation. People who sleep only 6 hours — going to bed late, waking early — systematically miss most of their REM. The cost is reduced insight and weaker procedural learning.
+
+Visualized across a single night:
+
+```
+   Sleep stage
+   ▲
+   │
+REM┤      ▁     ▁▁    ▁▁▁▁  ▁▁▁▁▁▁  ▁▁▁▁▁▁▁
+   │     ▁▁    ▁▁▁   ▁▁▁▁▁  ▁▁▁▁▁▁  ▁▁▁▁▁▁▁
+   │
+N1 ┤ ▁▁
+   │ ▁▁▁
+N2 ┤▁▁▁▁  ▁▁▁  ▁▁▁▁  ▁▁▁▁▁  ▁▁▁▁▁▁  ▁▁▁▁▁▁▁
+   │▁▁▁▁  ▁▁▁  ▁▁▁▁  ▁▁▁▁▁  ▁▁▁▁▁▁  ▁▁▁▁▁▁▁
+   │
+N3 ┤█████ ████ ████  ████   ███     ▁▁
+SWS│█████ ████ ████  ████   ███     ▁▁
+   │█████ ████ ████  ████   ███     ▁▁
+   │
+   └─┬────┬────┬─────┬──────┬───────┬────────►  hours
+     0    1.5  3     4.5    6       7.5
+
+   ◄────  SWS dominates  ────►◄──── REM dominates ────►
+   (declarative memory                  (procedural memory,
+    consolidation —                      emotional processing,
+    facts and concepts                   creativity, integration)
+    move to long-term storage)
+
+   ─────────────────────────────────────────────────────────
+   What this means:
+   • Sleep cycles roughly every 90 minutes
+   • Early cycles are heavy on slow-wave (deep) sleep
+   • Late cycles shift heavily toward REM
+   • Sleeping only 4-5 hours skips MOST of your REM time
+   • That's why short sleep wrecks creativity and skill learning
+     even more than it wrecks fact memory
+```
 
 ### What's actually being built at night
 

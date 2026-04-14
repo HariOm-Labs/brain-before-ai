@@ -6,6 +6,14 @@
 
 ## Prologue: The question that started everything
 
+By the end of this story, you'll understand something most people never do — what's actually happening inside your skull when you learn.
+
+Not metaphorically. Physically. Down to the molecule.
+
+You'll also understand, at the end, something more provocative: why the most advanced AI systems on Earth today *don't* do what your brain does — and why that's not a temporary limitation. But that's the last chapter. First, we need to follow someone who's learning.
+
+---
+
 It's a Tuesday afternoon. A physics teacher writes three symbols on the board:
 
 > **F = m × a**
@@ -27,6 +35,32 @@ This city is your brain.
 Each building is a **neuron** — a single brain cell. Each road is a **synapse** — the place where one neuron passes a message to another.
 
 The city has districts. There's a **Vision District** in the back of the head, busy with shapes and colors. A **Language District** on the left side, buzzing with words and meanings. A **Math District** a bit above that, doing arithmetic. A **Memory District** buried deep in the middle, archiving experiences. And up in front, a kind of city hall called the **Prefrontal Cortex**, where decisions get made and everything gets tied together.
+
+```
+                    ┌──────────────────────┐
+                    │   PREFRONTAL CORTEX  │
+                    │      (city hall:     │
+                    │   decisions, plans)  │
+                    └──────────────────────┘
+                              │
+            ┌─────────────────┼─────────────────┐
+            │                 │                 │
+     ┌────────────┐    ┌────────────┐    ┌────────────┐
+     │ LANGUAGE   │    │    MATH    │    │   VISION   │
+     │  DISTRICT  │    │  DISTRICT  │    │  DISTRICT  │
+     │  (words)   │    │  (numbers) │    │  (shapes)  │
+     └────────────┘    └────────────┘    └────────────┘
+                              │
+                    ┌──────────────────────┐
+                    │    MEMORY DISTRICT   │
+                    │    (hippocampus:     │
+                    │    filed experiences)│
+                    └──────────────────────┘
+
+              All connected by trillions of roads (synapses).
+              Each road can be wide or narrow. Experience
+              decides which ones get paved.
+```
 
 When Maya read "F = m × a", the symbols entered her city through her eyes. What happened next is a chase — the message travels from district to district, leaving tiny changes wherever it goes. Those changes, accumulated over days and weeks, are her new knowledge.
 
@@ -136,7 +170,7 @@ Calcium, in this context, is a **learning signal**. It says: *this connection ju
 
 The Canadian psychologist Donald Hebb summarized this in 1949 with a sentence that's now carved into every neuroscience textbook:
 
-> **Neurons that fire together, wire together.**
+> # Neurons that fire together, wire together.
 
 NMDA receptors are how that rule is physically implemented. They're the coincidence detectors that notice which neurons were active at the same moment — and mark those specific connections for strengthening.
 
@@ -153,6 +187,8 @@ The calcium rush sets off a chain of events that unfolds over different time sca
 This is why cramming doesn't work the way you hope. The first few minutes of a cram session activate scaffolding that hasn't even begun turning into foundation yet. Pull an all-nighter and then sleep for twelve hours, and some of it consolidates. Skip the sleep and go straight into a test, and most of what you "learned" was still scaffolding, waiting for proteins that never got made.
 
 Learning, in the deep sense, takes **weeks**. You can accelerate it a little, but you can't skip the construction time.
+
+When Maya leaves class that Tuesday, she has no sense that anything has happened. No flash of insight. No feeling of mastery. She walks to the bus stop, texts a friend, forgets about physics. But inside her skull — in a handful of neurons she'll never consciously meet — enzymes are activating, receptors are being tagged for strengthening, the first whispers of protein synthesis are beginning. The construction crew has arrived. Most of the real work will happen tonight, while she sleeps.
 
 ---
 
@@ -186,6 +222,8 @@ And here's a secret that makes teachers quietly frustrated: **you cannot give un
 
 ## Chapter 6: The volume knobs
 
+Everything I've described so far assumed an engaged, focused Maya. But learning doesn't actually work the same way in every state — and understanding why reveals one of the most underrated parts of how your brain learns. This is where most "why did I forget that?" mysteries get their answers.
+
 Now imagine Maya trying to learn the same physics unit twice, in two different moods.
 
 **Version one:** She's excited. She just got a scholarship. Her teacher is funny. The material clicks with something she read in a sci-fi novel last week.
@@ -216,6 +254,10 @@ This is why a well-rested, motivated, curious student learns five times as fast 
 ---
 
 ## Chapter 7: The roads that fade
+
+Fast-forward twenty years.
+
+Maya went to university, chose journalism over physics, and built a career writing about politics. She hasn't opened a physics book since she was nineteen. The F = ma network in her head — once vivid, richly connected, hard-earned over months of work — is still technically there, sitting in her cortex. But it hasn't been visited in over a decade.
 
 Maya is 35 now. She's a journalist, not a physicist. She hasn't thought about F = m × a in fifteen years.
 

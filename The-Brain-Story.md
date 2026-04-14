@@ -26,31 +26,31 @@ This guide is the story of what happened in Maya's head. The good news: it's the
 
 ---
 
-## Chapter 1: The city inside your head
+## Chapter 1: The university inside your head
 
-Picture your brain as a city.
+Picture your brain as a vast university campus.
 
-A sprawling one. **100 billion tiny buildings**, connected by **trillions of roads**.
+A sprawling one. **86 billion buildings** — every classroom, lab, library wing, dorm, and admin office. They're connected by **trillions of walkways** that ideas, signals, and messages travel along.
 
 - Each building is a **neuron** — a single brain cell.
-- Each road is a **synapse** — where one neuron passes a message to the next.
+- Each walkway is a **synapse** — where one neuron passes a message to the next.
 
-Like any city, it has districts. Each one has a job:
+Like a real university, this campus has departments. And unlike most city neighborhoods, each department genuinely specializes:
 
-- **Vision** — at the back of your head, processing what you see.
-- **Language** — on the left side, handling words and meaning.
-- **Math** — a bit above that, for numbers and equations.
-- **Memory** — buried deep in the middle, filing away experiences.
-- **Prefrontal Cortex** — up front. Think of it as city hall, where decisions get made and everything ties together.
+- **Vision Sciences** — at the back of campus, processing everything you see.
+- **Linguistics** — on the left side of campus, handling words and meaning.
+- **Mathematics** — dealing in numbers, equations, quantities.
+- **The Library** — your memory archive, where every experience gets filed away so you can find it again.
+- **The President's Office** — up front. The Prefrontal Cortex. Where decisions get made and the work of every other department ties together.
 
 ```mermaid
 flowchart TD
-    PFC[PREFRONTAL CORTEX<br/><i>city hall — decisions, planning</i>]
+    PFC[PRESIDENT'S OFFICE<br/><i>Prefrontal Cortex</i><br/>decisions, integration]
 
-    L[LANGUAGE<br/><i>words</i>]
-    M[MATH<br/><i>numbers</i>]
-    V[VISION<br/><i>shapes</i>]
-    MEM[MEMORY<br/><i>experiences</i>]
+    L[LINGUISTICS<br/><i>words</i>]
+    M[MATHEMATICS<br/><i>numbers</i>]
+    V[VISION SCIENCES<br/><i>shapes</i>]
+    MEM[THE LIBRARY<br/><i>memory archive</i>]
 
     L --> PFC
     M --> PFC
@@ -64,9 +64,9 @@ flowchart TD
     style MEM fill:#fce4ec,stroke:#ad1457
 ```
 
-*All districts connected by trillions of roads (synapses). Some roads wide, some narrow. **Experience decides which ones get paved.***
+*All departments connected by trillions of walkways (synapses). Some walkways well-traveled, others barely used. **Every time you learn something, new walkways get built.***
 
-When Maya read "F = m × a", the symbols entered her city through her eyes. What happened next is a chase — the message travels from district to district, leaving tiny changes wherever it goes. Those changes, accumulated over days and weeks, are her new knowledge.
+When Maya read "F = m × a", the symbols entered her campus through her eyes. What happened next is a chase — the message travels from department to department, leaving tiny changes wherever it goes. Those changes, accumulated over days and weeks, are her new knowledge.
 
 Let's follow one of those messengers.
 
@@ -81,6 +81,20 @@ Nora has an elaborate shape. Think of her as a tree. She has thousands of tiny b
 At the bottom of the tree is the **trunk** — her cell body. And from the trunk, a single long wire extends outward — her **axon**. The axon can be as short as a fraction of a millimeter or, for some neurons, as long as a full meter. At the far end, the axon branches out again into thousands of little endings called **terminals**. Each terminal is a post office where Nora sends messages to other neurons.
 
 So Nora receives on her branches, thinks in her trunk, and sends through her wire. Simple enough.
+
+```mermaid
+flowchart TD
+    IN[DENDRITES + SPINES<br/><i>the listening branches</i><br/>receive thousands of messages]
+    SOMA[SOMA — the trunk<br/><i>sums all inputs</i><br/>decides: fire or stay quiet?]
+    OUT[AXON + TERMINALS<br/><i>the sending wire</i><br/>passes the signal onward]
+
+    IN -->|messages in| SOMA
+    SOMA -->|if threshold reached| OUT
+
+    style IN fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+    style SOMA fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style OUT fill:#f3e5f5,stroke:#6a1b9a,stroke-width:2px
+```
 
 Except not really.
 
@@ -141,6 +155,19 @@ When Nora's spike arrives at a terminal, a cascade of events unfolds in under a 
 
 That's one "yes" vote, delivered.
 
+```mermaid
+sequenceDiagram
+    participant Nora as Nora's axon terminal
+    participant Gap as The tiny gap<br/>(synapse)
+    participant Nate as Nate's dendrite
+
+    Nora->>Nora: Electrical spike arrives
+    Nora->>Gap: Release glutamate<br/>(chemical)
+    Gap->>Nate: Glutamate drifts across<br/>(~0.1 millisecond)
+    Nate->>Nate: Receptors open<br/>→ becomes electrical again
+    Note over Nate: One "yes" vote, delivered
+```
+
 The whole journey — electricity to chemistry to electricity again — takes about half a thousandth of a second. But in that tiny moment lies the most important feature of the brain: **the gap can change**.
 
 Nora can learn to release more chemical. Nate can grow more receptors. The handoff can get stronger, or weaker, or disappear entirely. If Nora were connected directly to Nate by a wire, the strength would be fixed. But because there's a chemical gap in the middle, the connection is *negotiable*. It's tunable.
@@ -187,6 +214,21 @@ The calcium rush sets off a chain of events that unfolds over different time sca
 **Over the next hour or two,** proteins get manufactured. New receptors get shuttled into place. The connection strengthens further, more durably. Foundation is being poured.
 
 **Over days and weeks,** the dendritic spine itself grows bigger. Its cytoskeleton remodels. The whole structure physically changes. What was a dirt path is now a proper paved road.
+
+```mermaid
+flowchart LR
+    A[CALCIUM<br/>arrives<br/><i>moment 0</i>]
+    B[Receptors tweaked<br/><i>minutes</i><br/>scaffolding]
+    C[Proteins built<br/><i>hours</i><br/>foundation poured]
+    D[Spine grows<br/><i>days–weeks</i><br/>building complete]
+
+    A --> B --> C --> D
+
+    style A fill:#ffebee,stroke:#c62828
+    style B fill:#fff3e0,stroke:#ef6c00
+    style C fill:#fff9c4,stroke:#f9a825
+    style D fill:#e8f5e9,stroke:#2e7d32,stroke-width:3px
+```
 
 This is why cramming doesn't work the way you hope. The first few minutes of a cram session activate scaffolding that hasn't even begun turning into foundation yet. Pull an all-nighter and then sleep for twelve hours, and some of it consolidates. Skip the sleep and go straight into a test, and most of what you "learned" was still scaffolding, waiting for proteins that never got made.
 
@@ -247,6 +289,33 @@ There are four big ones:
 - **Norepinephrine** is the "wake up" signal. It turns up the general responsiveness of the whole brain.
 - **Serotonin** is the "stay with it" signal. When it's low, you give up faster. When it's adequate, you're willing to stay with a confusing problem until you get it.
 
+```mermaid
+flowchart LR
+    IN[INFORMATION<br/><i>flowing in:</i><br/>F = m × a]
+
+    subgraph KNOBS[" The four knobs adjust how it gets processed "]
+        DA[🎯 Dopamine<br/><i>this matters!</i>]
+        ACH[🔍 Acetylcholine<br/><i>focus here</i>]
+        NE[⚡ Norepinephrine<br/><i>wake up</i>]
+        SE[🧘 Serotonin<br/><i>stay with it</i>]
+    end
+
+    OUT_GOOD[✅ Saved as memory<br/><i>knobs turned up</i>]
+    OUT_BAD[❌ Discarded overnight<br/><i>knobs turned down</i>]
+
+    IN --> KNOBS
+    KNOBS --> OUT_GOOD
+    KNOBS --> OUT_BAD
+
+    style IN fill:#e3f2fd,stroke:#1565c0
+    style OUT_GOOD fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+    style OUT_BAD fill:#ffcdd2,stroke:#c62828,stroke-width:2px
+    style DA fill:#fff9c4
+    style ACH fill:#fff9c4
+    style NE fill:#fff9c4
+    style SE fill:#fff9c4
+```
+
 Version one of Maya had all four knobs turned up. Every new synapse got tagged for consolidation. Every example left a mark.
 
 Version two had low dopamine (bored), low acetylcholine (unfocused), low norepinephrine (tired), low serotonin (stressed). The information still entered her brain. But very little of it got flagged as worth keeping. Her brain quietly discarded most of it overnight.
@@ -304,6 +373,27 @@ During inference — which is what happens every time Priya types a question —
 Maya, by contrast, *is* physically changing in response to every conversation she's ever had. Right now, as she explains this to her daughter, new synapses are forming in Maya's brain. Old ones are strengthening. Her brain is a little different than it was ten minutes ago, and it will be different again in another ten minutes. Priya's brain, too — even faster, because she's twelve and her plasticity is high.
 
 This is the clearest, sharpest difference between a brain and a modern AI. Not intelligence. Not reasoning. Not speed.
+
+```mermaid
+flowchart LR
+    subgraph AI["🖥 ARTIFICIAL INTELLIGENCE"]
+        direction TB
+        T1[TRAINING<br/><i>shown millions of examples</i><br/>weights ADJUST]
+        T2[Weights FROZEN ❄️]
+        T3[INFERENCE<br/><i>your conversation with it</i><br/>📵 NO learning]
+        T1 --> T2 --> T3
+    end
+
+    subgraph BRAIN["🧠 HUMAN BRAIN"]
+        direction TB
+        B1[ALWAYS BOTH<br/><i>using what you know</i><br/>+<br/><i>quietly updating it</i><br/>🔄 every moment]
+    end
+
+    style AI fill:#fff3e0,stroke:#e65100
+    style BRAIN fill:#e8f5e9,stroke:#2e7d32
+    style T2 fill:#ffcdd2,stroke:#c62828
+    style B1 fill:#c8e6c9,stroke:#2e7d32,stroke-width:2px
+```
 
 **A brain is never done learning. An AI, once deployed, essentially is.**
 

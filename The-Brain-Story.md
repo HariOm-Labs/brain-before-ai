@@ -18,7 +18,7 @@ It's a Tuesday afternoon. A physics teacher writes three symbols on the board:
 
 > **F = m × a**
 
-A student in the back row — let's call her Maya — reads it. Nothing happens at first. Then, over the next few weeks, something extraordinary unfolds inside her skull. Tiny structures grow. Chemicals are released in precise sequences. Roads are paved between neighborhoods she didn't know existed.
+A student in the back row — let's call her Maya — reads it. Nothing happens at first. Then, over the next few weeks, something extraordinary unfolds inside her skull. Tiny structures grow. Chemicals are released in precise sequences. Walkways are paved between regions she didn't know existed.
 
 By the end of the month, Maya *understands* what force, mass, and acceleration mean. She can use the equation. She can explain it to her little brother. She can apply it to a rocket, a shopping cart, a car accident.
 
@@ -35,38 +35,38 @@ A sprawling one. **86 billion buildings** — every classroom, lab, library wing
 - Each building is a **neuron** — a single brain cell.
 - Each walkway is a **synapse** — where one neuron passes a message to the next.
 
-Like a real university, this campus has departments. And unlike most city neighborhoods, each department genuinely specializes:
+Like any technical university, this campus is organized into **branches** — each one specializing in something specific. Just as a real university has a CS branch, a Mechanical branch, a Math branch, your brain has its own:
 
-- **Vision Sciences** — at the back of campus, processing everything you see.
-- **Linguistics** — on the left side of campus, handling words and meaning.
-- **Mathematics** — dealing in numbers, equations, quantities.
-- **The Library** — your memory archive, where every experience gets filed away so you can find it again.
-- **The President's Office** — up front. The Prefrontal Cortex. Where decisions get made and the work of every other department ties together.
+- **The Vision Branch** — processes everything you see: shapes, colors, motion, faces.
+- **The Language Branch** — handles words, sentences, meaning, and understanding what people say.
+- **The Math Branch** — deals with numbers, quantities, equations, logic.
+- **The Library** — your memory archive. Every experience gets filed here so you can find it again later.
+- **The Director's Office** — where the institution's big decisions get made and the work of every branch ties together. In neuroscience, this is called the **prefrontal cortex**.
 
 ```mermaid
 flowchart TD
-    PFC[PRESIDENT'S OFFICE<br/><i>Prefrontal Cortex</i><br/>decisions, integration]
+    PFC[DIRECTOR'S OFFICE<br/><i>Prefrontal Cortex</i><br/>decisions · integration]
 
-    L[LINGUISTICS<br/><i>words</i>]
-    M[MATHEMATICS<br/><i>numbers</i>]
-    V[VISION SCIENCES<br/><i>shapes</i>]
-    MEM[THE LIBRARY<br/><i>memory archive</i>]
+    V[VISION BRANCH<br/><i>shapes, colors, faces</i>]
+    L[LANGUAGE BRANCH<br/><i>words, meaning</i>]
+    M[MATH BRANCH<br/><i>numbers, logic</i>]
+    LIB[THE LIBRARY<br/><i>memory archive</i>]
 
+    V --> PFC
     L --> PFC
     M --> PFC
-    V --> PFC
-    MEM --> PFC
+    LIB --> PFC
 
     style PFC fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    style V fill:#f3e5f5,stroke:#6a1b9a
     style L fill:#e3f2fd,stroke:#1565c0
     style M fill:#e8f5e9,stroke:#2e7d32
-    style V fill:#f3e5f5,stroke:#6a1b9a
-    style MEM fill:#fce4ec,stroke:#ad1457
+    style LIB fill:#fce4ec,stroke:#ad1457
 ```
 
-*All departments connected by trillions of walkways (synapses). Some walkways well-traveled, others barely used. **Every time you learn something, new walkways get built.***
+*All branches connected by trillions of walkways (synapses). Some walkways well-traveled, others barely used. **Every time you learn something, new walkways get built.***
 
-When Maya read "F = m × a", the symbols entered her campus through her eyes. What happened next is a chase — the message travels from department to department, leaving tiny changes wherever it goes. Those changes, accumulated over days and weeks, are her new knowledge.
+When Maya read "F = m × a", the symbols entered her campus through her eyes. The message then traveled from branch to branch, leaving tiny changes wherever it went. Those changes, accumulated over days and weeks, became her new knowledge.
 
 Let's follow one of those messengers.
 
@@ -182,9 +182,9 @@ If neurons were wired together instead of chemically connected, you'd come out o
 
 Now back to Maya and F = m × a.
 
-The teacher writes the equation. Photons bounce off the chalkboard, enter Maya's eyes, and set off an electrical chain reaction that races through her Vision District, up into her Language District (where the letters "F", "m", "a" get meaning), and into her Math District (where the multiplication sign becomes an operation).
+The teacher writes the equation. Photons bounce off the chalkboard, enter Maya's eyes, and set off an electrical chain reaction that races through her Vision Branch, up into her Language Branch (where the letters "F", "m", "a" get meaning), and into her Math Branch (where the multiplication sign becomes an operation).
 
-Many neurons in many districts are firing nearly at the same time. And among them, something special happens.
+Many neurons across many branches are firing nearly at the same time. And among them, something special happens.
 
 ### The coincidence detectors
 
@@ -213,7 +213,7 @@ The calcium rush sets off a chain of events that unfolds over different time sca
 
 **Over the next hour or two,** proteins get manufactured. New receptors get shuttled into place. The connection strengthens further, more durably. Foundation is being poured.
 
-**Over days and weeks,** the dendritic spine itself grows bigger. Its cytoskeleton remodels. The whole structure physically changes. What was a dirt path is now a proper paved road.
+**Over days and weeks,** the dendritic spine itself grows bigger. Its cytoskeleton remodels. The whole structure physically changes. What was a dirt path is now a proper paved walkway.
 
 ```mermaid
 flowchart LR
@@ -240,17 +240,17 @@ When Maya leaves class that Tuesday, she has no sense that anything has happened
 
 ## Chapter 5: Why understanding is different from knowing
 
-Three weeks into Maya's physics unit, she has what you might call **knowledge** of F = m × a. She has a small collection of strengthened synapses in her Math District that fire when she sees the equation. She can recite it. On a test with the formula written on the board, she can plug in numbers.
+Three weeks into Maya's physics unit, she has what you might call **knowledge** of F = m × a. She has a small collection of strengthened synapses in her Math Branch that fire when she sees the equation. She can recite it. On a test with the formula written on the board, she can plug in numbers.
 
 But her little brother asks her one day, "Why does a heavier thing need more force?"
 
 Maya freezes. She doesn't know how to answer.
 
-What's happening in her head is that F = m × a exists as an **island**. It's there — strengthened synapses, real physical structure — but it's isolated. Few roads connect it to other neighborhoods.
+What's happening in her head is that F = m × a exists as an **island**. It's there — strengthened synapses, real physical structure — but it's isolated. Few walkways connect it to other branches.
 
-Another three weeks pass. Maya's teacher gives more examples. She imagines pushing a shopping cart, full versus empty. She watches a video of a truck crashing vs a car crashing at the same speed. She works problems about rockets, elevators, dropping objects. Each of these creates new synapses — in her Motor District (where "pushing" lives), in her Emotional District (the satisfying clunk of the full cart refusing to move), in her Memory District (the time her dad's truck got stuck in snow).
+Another three weeks pass. Maya's teacher gives more examples. She imagines pushing a shopping cart, full versus empty. She watches a video of a truck crashing vs a car crashing at the same speed. She works problems about rockets, elevators, dropping objects. Each of these creates new synapses — in her Motor Branch (where "pushing" lives), in her Emotional Branch (the satisfying clunk of the full cart refusing to move), and in the Library (the time her dad's truck got stuck in snow).
 
-More importantly, as she sleeps each night, her brain does something quietly miraculous: it **connects** those newly-made synapses to the original F = m × a island. Bridges get built. Cross-roads get paved.
+More importantly, as she sleeps each night, her brain does something quietly miraculous: it **connects** those newly-made synapses to the original F = m × a island. Bridges get built. New walkways get paved.
 
 One afternoon, her little brother asks again. "Why does a heavier thing need more force?"
 
@@ -258,7 +258,7 @@ This time, the answer pours out of her. Because force is what it takes to *chang
 
 Something **clicked**.
 
-That click was the moment an integration neuron — one that had been receiving input from all of Maya's separate little networks, slowly getting closer to its firing threshold — finally crossed the line. All the districts lit up in sync. For the first time, "F", "m", "a", "push", "cart", "truck", "rocket", "inertia" were all members of one connected conversation.
+That click was the moment an integration neuron — one that had been receiving input from all of Maya's separate little networks, slowly getting closer to its firing threshold — finally crossed the line. All the branches lit up in sync. For the first time, "F", "m", "a", "push", "cart", "truck", "rocket", "inertia" were all members of one connected conversation.
 
 That's **understanding**. It's not a fact. It's a network. It's not what you know — it's how richly your knowledge is connected to everything else you know.
 
@@ -280,7 +280,7 @@ Same teacher, same words on the board, same Maya. And yet, three months later, s
 
 Why?
 
-Because alongside the information flowing through her districts, another set of signals was flowing too — the **modulators**. Think of them as volume knobs and highlighters. They don't carry the content; they change how the content gets processed.
+Because alongside the information flowing through her branches, another set of signals was flowing too — the **modulators**. Think of them as volume knobs and highlighters. They don't carry the content; they change how the content gets processed.
 
 There are four big ones:
 
@@ -326,7 +326,7 @@ This is why a well-rested, motivated, curious student learns five times as fast 
 
 ---
 
-## Chapter 7: The roads that fade
+## Chapter 7: The walkways that fade
 
 Fast-forward twenty years.
 
@@ -338,15 +338,15 @@ Someone at a dinner party mentions Newton's laws. Maya's brow furrows. She knows
 
 What happened?
 
-She didn't lose the memory. Not entirely. What happened is called **synaptic pruning**. Roads that don't get used get overgrown. The receptors at an unused synapse gradually get reabsorbed. Over years, a strong connection (say, 500 receptors) might drop to 100, then 50, and eventually the synapse itself gets eliminated.
+She didn't lose the memory. Not entirely. What happened is called **synaptic pruning**. Walkways that don't get used get overgrown. The receptors at an unused synapse gradually get reabsorbed. Over years, a strong connection (say, 500 receptors) might drop to 100, then 50, and eventually the synapse itself gets eliminated.
 
-The cruel twist: the brain does this on purpose. It's a feature, not a bug. You can't maintain every road in a 100-billion-building city. The brain is constantly making real-estate decisions: *does this connection still pay rent?* If not, it gets demolished and the resources go somewhere else.
+The cruel twist: the brain does this on purpose. It's a feature, not a bug. You can't maintain every walkway in an 86-billion-building campus. The brain is constantly making real-estate decisions: *does this connection still pay rent?* If not, it gets demolished and the resources go somewhere else.
 
 **The phrase "use it or lose it" is literal.**
 
-But here's the hopeful part. When Maya, at the dinner party, pulls out her phone and reads a quick refresher on F = m × a, something remarkable happens. The relearning is much, much faster than the original learning. Why? Because the *ghost* of the original network is still there. Some bridges remain. Some spines haven't fully retracted. A few good examples and the roads get re-paved, not built from scratch.
+But here's the hopeful part. When Maya, at the dinner party, pulls out her phone and reads a quick refresher on F = m × a, something remarkable happens. The relearning is much, much faster than the original learning. Why? Because the *ghost* of the original network is still there. Some bridges remain. Some spines haven't fully retracted. A few good examples and the walkways get re-paved, not built from scratch.
 
-This is why reviewing material you half-forgot feels surprisingly satisfying. You're not starting from zero. You're doing renovation work on a city that still stands.
+This is why reviewing material you half-forgot feels surprisingly satisfying. You're not starting from zero. You're doing renovation work on a campus that still stands.
 
 ---
 

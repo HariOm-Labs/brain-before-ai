@@ -26,7 +26,7 @@ This chapter walks through what's captured, what isn't, and why the difference m
 
 To be fair, the borrowing from biology is real. Modern AI systems implement:
 
-- **Networks of units with weighted connections** — a rough abstraction of neurons and synapses.
+- **Networks of units with weighted connections** — a rough abstraction of neurons and synapses. The **"weights"** in a neural network are the AI analog of **synaptic strength** in a biological brain. Both encode what the system has learned.
 - **Activation functions** — a simplified version of the firing threshold.
 - **Gradient descent / backpropagation** — a mathematical method for adjusting weights, loosely analogous to learning.
 - **Hierarchical representations** — early layers detect simple features, later layers detect complex patterns. (This actually does mirror how the visual cortex works: V1 → V2 → V4 → IT.)

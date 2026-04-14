@@ -6,17 +6,27 @@
 
 ---
 
+## What learning actually is
+
+Strip away the metaphors and learning has a single physical definition:
+
+> **Learning is the modification of synaptic strength.**
+
+That's it. When you learn something, certain specific synapses become stronger. When you forget, they weaken. The pattern of which synapses are strong and which are weak — across thousands of connections — is the memory itself.
+
+Everything else in this chapter is about *how* that strength change happens at the molecular level: what triggers it, what enzymes carry it out, what makes it permanent, and what derails it.
+
 ## The moment a memory begins
 
 Imagine you're sitting in a class. The teacher writes an equation on the board: F = m × a. You see it. You read it. You think you understand it.
 
-In that instant, somewhere deep in your brain — at one specific synapse, between two specific neurons you'll never know the names of — a tiny molecular drama begins.
+In that instant, somewhere deep in your brain — at one specific synapse, between two specific neurons you'll never know the names of — a tiny molecular drama begins. **The synaptic strength of that connection is about to change.**
 
-A protein opens. A handful of calcium ions rush in. An enzyme activates. Nearby receptors get tagged. A signal travels toward the cell's nucleus. Hours later, while you sleep, new proteins are manufactured and shipped to that synapse. Days later, the synapse is physically larger than it was. Weeks later, the connection is permanent.
+A protein opens. A handful of calcium ions rush in. An enzyme activates. Nearby receptors get tagged. A signal travels toward the cell's nucleus. Hours later, while you sleep, new proteins are manufactured and shipped to that synapse. Days later, the synapse is physically larger than it was. Weeks later, the connection is permanently stronger than it was an hour before class.
 
-That entire molecular project, repeated across thousands of synapses, *is* you learning F = ma.
+That entire molecular project — repeated across thousands of synapses, each one having its strength adjusted — *is* you learning F = ma.
 
-This chapter is about what that project actually looks like — and why some study sessions trigger it and others don't.
+This chapter is about what that project actually looks like, step by step.
 
 ---
 
@@ -75,19 +85,19 @@ flowchart TD
 
 Read top to bottom — that's the timeline. **Each stage depends on the one before it.** Skip the early stages and the cascade stalls. Skip the later stages (mostly because you didn't sleep) and the early changes decay.
 
-What's actually happening at each stage:
+What's actually happening at each stage — and what each stage does to **synaptic strength**:
 
-1. **Calcium activates enzymes** — most importantly CaMKII (calcium/calmodulin-dependent kinase II). This is the master switch.
-2. **Existing AMPA receptors get phosphorylated** (within minutes) — a chemical tag makes them more conductive and more stable. The synapse instantly works better.
-3. **New AMPA receptors get inserted** into the membrane (~30 minutes). The synapse becomes physically stronger — more receptors, more sensitivity to the next signal.
-4. **A signal travels to the nucleus** via second-messenger molecules.
+1. **Calcium activates enzymes** — most importantly CaMKII (calcium/calmodulin-dependent kinase II). This is the master switch. *(Synaptic strength: still unchanged. The signal has just arrived.)*
+2. **Existing AMPA receptors get phosphorylated** (within minutes). A chemical tag makes them more conductive and more stable. *(Synaptic strength: rises, but only temporarily — fragile.)*
+3. **New AMPA receptors get inserted** into the membrane (~30 minutes). *(Synaptic strength: now physically higher — more receptors mean a bigger response to the next signal. Still reversible.)*
+4. **A signal travels to the nucleus** via second-messenger molecules. *(Strength unchanged here — but the cell is being told to start building.)*
 5. **The CREB transcription factor activates** (30–60 minutes), turning on a specific set of "learning genes."
-6. **New proteins are synthesized** (1–4 hours) — receptors, scaffolding molecules, structural proteins.
-7. **The dendritic spine itself grows physically** (days–weeks). Volume can triple. The structure is now permanent — barring long disuse.
+6. **New proteins are synthesized** (1–4 hours) — receptors, scaffolding molecules, structural proteins. *(Synaptic strength: stabilizing. The temporary boost is becoming permanent.)*
+7. **The dendritic spine itself grows physically** (days–weeks). Volume can triple. *(Synaptic strength: locked in at the new higher level. Permanent unless unused for months.)*
 
-The result: a synapse that was weak (50 AMPA receptors, 0.3 µm³ spine volume) becomes strong (500 receptors, 1.5 µm³). **That ten-fold change *is* the memory.**
+The whole cascade has done one thing: **moved the synapse from weak (~50 AMPA receptors, 0.3 µm³ spine volume) to strong (~500 receptors, 1.5 µm³).** A 10× increase in synaptic strength.
 
-It's not stored anywhere. It *is* the synapse, in its new strengthened form.
+That 10× change *is* the memory. It's not stored anywhere. It IS the synapse, in its new strengthened form.
 
 ---
 

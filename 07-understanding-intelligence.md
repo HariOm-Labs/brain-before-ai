@@ -107,7 +107,7 @@ That's what learning looks like inside your brain. It's not absorption — it's 
 
 If learning is the construction, knowledge is **the building**. The physical structure that's left when the work is done.
 
-Your knowledge of F = ma isn't filed somewhere. It literally *is* a specific pattern of synaptic structures — about 10,000–50,000 strengthened synapses, scattered across:
+Said precisely: **knowledge is a pattern of elevated synaptic strengths across thousands of specific connections.** Your knowledge of F = ma exists as roughly 10,000–50,000 synapses whose strength has been elevated through learning, scattered across:
 
 - **Visual cortex** — recognizing the symbols on a page.
 - **Language areas** — connecting them to words ("force equals mass times acceleration").
@@ -116,7 +116,9 @@ Your knowledge of F = ma isn't filed somewhere. It literally *is* a specific pat
 - **Motor cortex** — the felt sense of pushing something heavy.
 - **Application networks** — engineering problems, physics homework.
 
-If those synapses weakened from disuse — which they will, slowly, if you never revisit the equation — you'd forget F = ma. **Knowledge isn't stored. Knowledge IS the structure.** Damage the structure, lose the knowledge. There's no separate filing cabinet to recover from.
+If those synaptic strengths decayed from disuse — which they will, slowly, if you never revisit the equation — you'd forget F = ma. **Knowledge isn't stored. Knowledge IS that pattern of synaptic strengths.** Damage the pattern, lose the knowledge. There's no separate filing cabinet to recover from.
+
+(Side note for ML readers: this is the biological version of what artificial neural networks call "weights." When an ML paper says "the model learned from the training data," it means the network's weights were adjusted. Your brain does the same thing — it just calls the adjustment "synaptic strength" instead of "weight," and uses molecular machinery instead of gradient descent. Same concept; very different mechanism.)
 
 ### How much synaptic structure equals how much knowledge?
 

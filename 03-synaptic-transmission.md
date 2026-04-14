@@ -152,7 +152,9 @@ Trivial alone. But the soma is collecting hundreds of these bumps simultaneously
 
 ---
 
-## What makes a synapse "strong"?
+## Synaptic strength — what makes a synapse "strong"?
+
+The technical term for how much voltage change a single synapse produces in the receiving neuron is **synaptic strength**. It's the canonical concept this whole chapter has been describing. (When you later read ML literature talking about "weights," that's the artificial-neural-network analog of biological synaptic strength. Same concept; biology calls it strength, ML calls it weight.)
 
 Both sides of the synapse can be tuned:
 

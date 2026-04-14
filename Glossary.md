@@ -180,6 +180,8 @@ If you're reading a chapter and hit a term you don't recognize, come here first.
 
 **Synaptic cleft** — The tiny gap (20–40 nanometers) between two neurons at a synapse, across which neurotransmitter diffuses.
 
+**Synaptic strength** — How much voltage change a single synapse produces in the receiving neuron when it fires. A "weak" synapse might have ~50 AMPA receptors and produce a small voltage bump; a "strong" one might have ~500 receptors and produce a 10× larger bump. **Synaptic strength is what learning physically modifies.** Every memory you have is a pattern of strengthened synapses. The artificial-neural-network analog is the **"weight"** — when an ML paper says "the model's weights," that's roughly the AI equivalent of synaptic strengths in a biological brain.
+
 **Synaptotagmin** — The calcium-sensing protein on synaptic vesicles that triggers neurotransmitter release.
 
 ## T

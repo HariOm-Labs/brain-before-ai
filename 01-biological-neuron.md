@@ -50,31 +50,40 @@ The interesting part isn't the *what* — it's the *how*. A neuron is a three-zo
 
 Imagine zooming in on one neuron buried somewhere in your prefrontal cortex. Up close, it doesn't look like a cell at all. It looks like a tree.
 
-```mermaid
-flowchart TD
-    subgraph INPUT["LISTENING ZONE — receives messages"]
-        D1[Dendrites<br/>branching input network]
-        D2[Dendritic spines<br/>tiny bumps where synapses live]
-    end
-
-    subgraph DECIDE["DECIDING ZONE — integrates and fires"]
-        S[Soma<br/>sums all inputs<br/>fires if threshold reached]
-        N[Nucleus<br/>handles long-term changes]
-    end
-
-    subgraph OUTPUT["BROADCASTING ZONE — sends the message"]
-        H[Axon hillock<br/>where the spike is born]
-        A[Axon<br/>the long wire<br/>wrapped in myelin insulation]
-        T[Axon terminals<br/>release neurotransmitter<br/>to next neurons]
-    end
-
-    D1 --> D2 --> S
-    S --- N
-    S --> H --> A --> T
-
-    style INPUT fill:#e3f2fd,stroke:#1976d2
-    style DECIDE fill:#fff3e0,stroke:#f57c00
-    style OUTPUT fill:#f3e5f5,stroke:#7b1fa2
+```
+                   \   |   /
+                    \  |  /                ╭─── LISTENING ZONE ───╮
+                     \\|//                 │  Dendrites and spines │
+                   \  \|/  /               │  receive signals from │
+                    \ \|/ /                │  thousands of other   │
+                     \\|//                 │  neurons at once.     │
+                      \|/                  ╰───────────────────────╯
+                       ▼
+                 ┌──────────┐
+                 │          │              ╭─── DECIDING ZONE ─────╮
+                 │   SOMA   │              │  The cell body adds   │
+                 │    ●     │ ← nucleus    │  up every input.      │
+                 │          │              │  Fires a spike if the │
+                 └─────┬────┘              │  total crosses the    │
+                       │ ← axon hillock    │  firing threshold.    │
+                       │  (spike starts    ╰───────────────────────╯
+                       │   here)
+                   ━━━━│━━━━
+                       │                   ╭── BROADCASTING ZONE ──╮
+                   ━━━━│━━━━ ← myelin      │  The axon is a long   │
+                       │     insulation    │  wire that carries    │
+                   ━━━━│━━━━               │  the spike to other   │
+                       │                   │  neurons at up to     │
+                   ━━━━│━━━━               │  120 m/s.             │
+                       │                   │                       │
+                     ╱ │ ╲                 │  Myelin (the bands)   │
+                    ╱  │  ╲                │  is fatty insulation  │
+                   ╱   │   ╲               │  that makes it fast.  │
+                  ●    ●    ●              │                       │
+                  ▼    ▼    ▼              │  Terminals (the fan)  │
+              (to other neurons)           │  release chemicals    │
+                                           │  into next neurons.   │
+                                           ╰───────────────────────╯
 ```
 
 Three zones, one job each. Same architecture in every one of your 86 billion neurons. **And signal flow is one-way** — listening → deciding → broadcasting, never the reverse. That one-way-ness is essential. It's how the brain maintains direction and coherence across billions of conversations happening at once.

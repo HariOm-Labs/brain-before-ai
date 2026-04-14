@@ -30,6 +30,33 @@ This electrical imbalance doesn't maintain itself. A protein called the **sodium
 
 When the spring is fully wound, the neuron is poised. One trigger — and it fires.
 
+Here's what the loaded state actually looks like:
+
+```
+              OUTSIDE the neuron
+       ● ● ●  Na⁺ (sodium — abundant out here)
+       ●  ●   Cl⁻ (chloride — abundant out here)
+        ●     Ca²⁺ (calcium — modest, but very depleted inside)
+                                                        voltage:
+═══════════════════════════════════ ← MEMBRANE ────────────────
+                                                        −70 mV
+       ● ● ● ● ●  K⁺ (potassium — abundant in here)     (inside is
+        ○ Na⁺                                            more negative
+        ○ Cl⁻                                            than outside)
+              INSIDE the neuron
+
+   ┌────────────────────────────────────────────────┐
+   │  THE Na⁺/K⁺ PUMP runs constantly:              │
+   │    ● pushes 3 Na⁺ ions OUT                     │
+   │    ● pulls 2 K⁺ ions IN                        │
+   │    ● costs about half the neuron's energy      │
+   │  Stop the pump → gradients collapse →          │
+   │  neuron dies within minutes.                   │
+   └────────────────────────────────────────────────┘
+```
+
+That asymmetry — different particles dominating each side, the pump constantly working to maintain it — *is* the loaded spring. The energy needed to fire a spike is already stored in those gradients, just waiting for the gates to open.
+
 ---
 
 ## The spike, as a story
@@ -93,6 +120,24 @@ Information about *how strong* the input was isn't encoded in the size of any si
 
 A stronger sensation = more spikes per second. The brain reads frequency the way you'd read Morse code: more dots per second = more urgency.
 
+Visualized as actual spike trains:
+
+```
+Light touch (~10 spikes/sec)
+   |          |          |          |          |
+   ├─────────────────────────────────────────────►  time
+
+Moderate pressure (~50 spikes/sec)
+   | | | | | | | | | | | | | | | | | | | | | | | | |
+   ├─────────────────────────────────────────────►  time
+
+Painful stimulus (~200 spikes/sec)
+   ||||||||||||||||||||||||||||||||||||||||||||||||||
+   ├─────────────────────────────────────────────►  time
+
+Same spike size every time. Information lives in the rate.
+```
+
 There's also a brief mandatory cooldown after each spike — a few milliseconds where the neuron *can't* fire again no matter what. This is called the **refractory period**, and it does two important jobs: it caps the firing rate, and it forces each spike to travel down the axon in only one direction (the section of axon behind the spike is in cooldown and can't re-fire).
 
 ---
@@ -113,7 +158,27 @@ The spike effectively *jumps* from one node to the next, skipping the insulated 
 
 Myelin is also dramatically more energy-efficient. Vast stretches of axon stay quiet between firings.
 
-This is why the disease **multiple sclerosis** is so devastating. MS attacks and destroys myelin. The neurons themselves are still fine. Their messages just slow down, distort, or fail to arrive in time to be useful.
+The two propagation modes side by side:
+
+```
+SLOW: bare axon  (0.5 to 10 m/s)
+─────────────────────────────────────────────────────────
+   ●→●→●→●→●→●→●→●→●→●→●→●→●→●→●→●→●→●→●→●→●→●→●→●→●→●
+   (spike must regenerate at every adjacent point —
+    like dominoes falling, one after another)
+
+
+FAST: myelinated axon  (10 to 120 m/s — up to 100× faster)
+─────────────────────────────────────────────────────────
+        ●═══════●═══════●═══════●═══════●═══════●
+        ▲       ▲       ▲       ▲       ▲       ▲
+      Node    Node    Node    Node    Node    Node
+              ◄─────── myelin insulation ───────►
+   (spike "jumps" Node-to-Node, skipping the
+    insulated stretches entirely)
+```
+
+This is why the disease **multiple sclerosis** is so devastating. MS attacks and destroys myelin. The neurons themselves are still fine — they're not damaged or killed. Their messages just lose the ability to jump between nodes. Signals slow down, distort, or fail to arrive in time to be useful. **The wires are intact. The insulation is gone.**
 
 ---
 

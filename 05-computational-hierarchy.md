@@ -73,6 +73,49 @@ What this means: **each dendritic branch is doing its own pattern recognition be
 
 A typical pyramidal neuron in the cortex has hundreds of these branches. Each one is, in effect, a mini-detector tuned to fire only when a particular *combination* of inputs arrives at it. One branch might fire only when inputs A, B, and C arrive together. Another might fire only when D and E arrive but not F.
 
+Visualized, here's what a single neuron's parallel branch computation actually looks like:
+
+```
+   BRANCH A         BRANCH B          BRANCH C        ...hundreds more
+   detects          detects "B&W      detects
+   "round"          pattern"          "rolling"
+
+    \  ●●●           |  ●●●            /  ●●●            \  ●  /
+     \ fires!        |  fires!         / fires!           \ quiet \
+      \  │            │  │             /  │                \   │   \
+       \ │            │  │            /   │                  no spike
+        \│            │  │           /    │
+         ╲            │  │          ╱     │
+          ╲           │  │         ╱      │
+           ╲          │  │        ╱       │      ← Each branch fires its
+            ╲         │  │       ╱        │        own "dendritic spike"
+             ╲        │  │      ╱         │        independently — local
+              ╲       │  │     ╱          │        pattern recognition
+               ╲      │  │    ╱           │        BEFORE the soma sees
+                ╲     │  │   ╱            │        anything.
+                 ╲    │  │  ╱             │
+                  ╲   │  │ ╱              ╱
+                   ╲  │  │╱              ╱
+                    ╲ │  ╱              ╱
+                     ╲│ ╱              ╱
+                  ┌───▼─────────────────▼───┐
+                  │        SOMA             │  ← Level 2: integrates
+                  │  sums all branch        │     all the branch outputs
+                  │  outputs                │
+                  └────────────┬────────────┘
+                               │
+                               ▼
+                       ┌───────────────┐
+                       │ AXON HILLOCK  │  ← Level 3: fire or stay
+                       │ V ≥ -55 mV?   │     silent
+                       └───────┬───────┘
+                               │
+                               ▼ spike
+                       "soccer ball detected"
+```
+
+Notice the key thing: **the branches each did their own pattern recognition before the soma was even involved.** That's the "Level 1" computation that artificial neural networks completely skip. AI's "neurons" jump straight to Level 2 (the global sum) — losing all that hidden parallel processing.
+
 ### Why this matters — a problem a simple neuron can't solve
 
 Imagine you need a neuron that recognizes "A AND B AND C together, but NOT A AND D."
@@ -158,9 +201,44 @@ Multiply by 86 billion neurons running this kind of operation simultaneously, an
 
 Most artificial neural networks implement only Level 2 — a single weighted sum per "neuron," followed by an activation function. No Level 1. No Level 3 distinction. Everything is global, linear, and stateless.
 
-To match the computational richness of *one* biological pyramidal neuron, an artificial network typically needs a small sub-network of 5–10 units. Which means the naive comparison —
+Side by side, the difference is dramatic:
 
-> "The brain has 86 billion neurons. A neural network with 86 billion units should be roughly equivalent."
+```
+   ARTIFICIAL "NEURON"                    BIOLOGICAL NEURON
+   (the AI version)                       (what's actually in your head)
+
+
+      x₁  ──┐                                  \  |  /
+      x₂  ──┤  weights                          \\|//   ← Level 1:
+      x₃  ──┼──→ Σ ──→ activation             \  \|/  /    hundreds of
+      x₄  ──┤        function              ┌───\\|//───┐    branches each
+      x₅  ──┤             │                │  branches  │   doing local
+      x₆  ──┘             ▼                │   firing   │   pattern
+                       output              │ ●● ●● ●●  │   recognition
+                                           └─────┬─────┘
+   "Take inputs, multiply by                     │
+    weights, sum, threshold."                    ▼
+    That's it. One step.                  ┌────────────┐ ← Level 2:
+                                          │   SOMA     │   integrates
+                                          │ ●          │   all branch
+                                          └─────┬──────┘   outputs
+                                                │
+                                                ▼ ← Level 3:
+                                          ┌────────────┐   axon hillock
+                                          │  HILLOCK   │   fires the
+                                          │ fire/quiet │   spike
+                                          └─────┬──────┘
+                                                │
+                                                ▼ spike
+
+   1 unit of computation                  5–10 "units" worth of
+                                          computation in a single cell
+   ────────────────────────────────────────────────────────────────
+```
+
+So the naive comparison —
+
+> *"The brain has 86 billion neurons. A neural network with 86 billion units should be roughly equivalent."*
 
 — is dramatically wrong. The brain's *effective* unit count, in artificial-neuron terms, is somewhere between 400 billion and a trillion, simply because each biological neuron does so much more per cell.
 

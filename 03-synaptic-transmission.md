@@ -43,20 +43,37 @@ The chemical gap allows synapses to **strengthen, weaken, grow, or disappear** b
 
 ## What a synapse looks like, structurally
 
-Before the 9-step handoff, a quick anatomy refresher. A typical excitatory synapse has three parts:
+Before the 9-step handoff, a quick anatomy refresher. A typical excitatory synapse has three parts. Here's what one actually looks like at the molecular scale:
 
-```mermaid
-flowchart TD
-    A[Sending neuron's<br/>AXON TERMINAL<br/><i>the bulbous tip<br/>of an axon branch</i>]
-    B[SYNAPTIC CLEFT<br/><i>20–40 nm gap</i>]
-    C[Receiving neuron's<br/>DENDRITIC SPINE<br/><i>a tiny mushroom-shaped bump<br/>on a dendrite</i>]
-
-    A -->|releases neurotransmitter into| B
-    B -->|diffuses to receptors on| C
-
-    style A fill:#ffebee,stroke:#c62828
-    style B fill:#fff9c4,stroke:#f9a825
-    style C fill:#e8f5e9,stroke:#2e7d32
+```
+              SENDING NEURON
+       ┌───────────────────────────┐
+       │   AXON TERMINAL           │
+       │   (bulbous tip of axon)   │
+       │                           │
+       │      ●  ●  ●              │
+       │     ●  ●  ●  ●  ← vesicles│
+       │      ●  ●  ●     each holds
+       │                  ~10,000 molecules
+       │                  of neurotransmitter
+       │     ▼  ▼  ▼  ← release sites
+       └─────┴──┴──┴───────────────┘
+              ░  ░  ░
+              ░  ░  ░  ← SYNAPTIC CLEFT
+            ●░  ●  ░●     (the gap — 20-40 nm wide)
+              ░  ●  ░
+            ●░  ░  ●░  ← neurotransmitter
+              ░  ●  ░     drifting across
+              ░  ░  ░
+       ┌─────▲──▲──▲───────────────┐
+       │     │  │  │  ← receptors  │
+       │     R  R  R    (AMPA + NMDA)
+       │     R  R  R                │
+       │                            │
+       │   DENDRITIC SPINE          │
+       │   (the receiving bump)     │
+       └────────────────────────────┘
+              RECEIVING NEURON
 ```
 
 Two crucial directional rules to keep straight (they're easy to fudge in casual descriptions):
@@ -65,6 +82,8 @@ Two crucial directional rules to keep straight (they're easy to fudge in casual 
 2. **Dendritic spines exist only on the receiving side.** They never connect to other spines. They're the postsynaptic side of an excitatory synapse, full stop.
 
 (Inhibitory GABA synapses can sit directly on the dendrite shaft or the soma rather than on a spine, but the directional rule still holds — terminal sends, postsynaptic side receives.)
+
+**Where learning lives:** the number of receptors on the receiving spine — those R's in the diagram — is what changes with experience. Every memory you have is a pattern of "how many R's at which synapses." We'll come back to this in the synaptic strength section below.
 
 With the geography clear, here's the handoff.
 
@@ -160,6 +179,39 @@ End of drama. Total elapsed time: about 1.5 milliseconds.
 ## Synaptic strength — what makes a synapse "strong"?
 
 The technical term for how much voltage change a single synapse produces in the receiving neuron is **synaptic strength**. It's the canonical concept this whole chapter has been describing. (When you later read ML literature talking about "weights," that's the artificial-neural-network analog of biological synaptic strength. Same concept; biology calls it strength, ML calls it weight.)
+
+Here's what weak and strong synapses actually look like, side by side:
+
+```
+   WEAK SYNAPSE                       STRONG SYNAPSE
+   (rarely used)                      (well-learned)
+
+   ┌─────────────┐                    ┌─────────────────┐
+   │   ●  ●      │                    │ ●●●● ●●●● ●●●●  │
+   │      ●      │ ← few vesicles     │ ●●●●●●●●●●●●●●  │ ← many vesicles
+   │   ●         │                    │ ●●●● ●●●● ●●●●  │
+   │     ▼       │                    │  ▼▼▼▼▼▼▼▼▼▼     │
+   └─────┴───────┘                    └──┴┴┴┴┴┴┴┴┴┴─────┘
+   releases 0–1                       releases 5–10
+   per spike                          per spike
+       ░                                  ●●●●●●
+       ░                                ●●●●●●●●●●
+       ░                                  ●●●●●●
+   ┌───▲─────────┐                    ┌──▲▲▲▲▲▲▲▲▲▲────┐
+   │   R         │                    │ RRRRRRRRRRRRR   │
+   │      R      │ ← ~50 AMPA         │ RRRRRRRRRRRRR   │ ← ~500 AMPA
+   │   R    R    │   receptors        │ RRRRRRRRRRRRR   │   receptors
+   │             │                    │                 │
+   │  small      │                    │   bigger        │
+   │  spine      │                    │   spine         │
+   └─────────────┘                    └─────────────────┘
+
+   Voltage bump: ~5 mV                 Voltage bump: up to 15 mV
+
+   ─────────────  10× stronger  ─────────────
+        Built entirely through experience.
+   This is what learning physically does to a synapse.
+```
 
 Both sides of the synapse can be tuned:
 

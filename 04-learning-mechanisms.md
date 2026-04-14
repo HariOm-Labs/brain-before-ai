@@ -55,6 +55,40 @@ When *both* conditions are met, the channel finally opens — and calcium floods
 
 That calcium is the **learning signal**. The synapse has just been told: *this connection just experienced a coincidence. Strengthen it.*
 
+Here's how the NMDA gate behaves in three different scenarios:
+
+```
+   SCENARIO 1: At rest          SCENARIO 2: Sender fires      SCENARIO 3: BOTH neurons
+   (neither neuron firing)      but receiver still quiet       firing at the same moment
+
+      sender (quiet)                sender (FIRES!)              sender (FIRES!)
+          │                              │                            │
+          │ ← no glutamate               ▼ glutamate ●●●              ▼ glutamate ●●●
+          │
+                                   ┌────────────┐               ┌────────────┐
+      ┌──────────┐                 │   NMDA     │               │   NMDA     │
+      │  NMDA    │                 │            │               │            │
+      │ ╭───╮    │                 │ ╭───╮      │               │ ╭ open ╮   │
+      │ │Mg²⁺│ ← │                 │ │Mg²⁺│ ←   │               │ │      │   │
+      │ ╰───╯ blocks│                │ ╰───╯ STILL │               │ ╰──────╯ ← Mg²⁺
+      │  the gate │                 │  blocks the │               │  EJECTED!
+      │           │                 │  gate       │               │  ●●●●●● Ca²⁺
+      │ no Ca²⁺   │                 │ (glutamate  │               │  flooding in
+      │ flow      │                 │  alone     │                │
+      └───────────┘                 │  isn't     │                │ receiver:
+                                    │  enough)   │                │ ALSO firing
+      receiver: resting             │            │                │ (depolarized)
+                                    │ no Ca²⁺    │                └────────────┘
+                                    │ flow       │                       │
+                                    └────────────┘                       ▼
+                                                                  LEARNING SIGNAL
+                                    receiver: resting             (synapse strengthens)
+   ────────────────────────────────────────────────────────────────────────
+   Why NMDA is the molecular implementation of Hebb's rule:
+   BOTH neurons must be active simultaneously for the gate to open.
+   Calcium only flows when "fire together" actually happens.
+```
+
 This is exactly Hebb's rule, implemented in protein. The brain doesn't strengthen all active synapses — it strengthens only those where the sender and the receiver were both firing in the same moment. That selectivity is what allows learning to be specific instead of indiscriminate.
 
 ---
@@ -138,6 +172,39 @@ The memory wasn't stored in one place. It was distributed across a rich, interco
 He read the equation and looked at a diagram. That's it. Two angles.
 
 A handful of synapses in a couple of regions began strengthening — but isolated, with few cross-links. By morning, most of the temporary changes had decayed without anything permanent forming.
+
+Visualized as which brain regions activate in each student:
+
+```
+   STUDENT A (deep learner)              STUDENT B (shallow learner)
+   reads "F = m × a"                     reads "F = m × a"
+
+   Vision           ●●●●●                Vision           ●●
+   Language         ●●●●●                Language         ●●
+   Math             ●●●●●                Math             ○
+   Memory           ●●●●●                Memory           ○
+   Motor cortex     ●●●●●                Motor cortex     ○
+   Causal reasoning ●●●●●                Causal reasoning ○
+   Predictive       ●●●●●                Predictive       ○
+   Cross-domain     ●●●●●                Cross-domain     ○
+   Emotional        ●●●●●                Emotional        ○
+   Integration      ●●●●●                Integration      ○
+
+   ~15 regions firing in                  ~2 regions firing
+   coordinated patterns                   in isolation
+
+   ↓                                       ↓
+
+   THOUSANDS of synapses begin             A HANDFUL of synapses
+   strengthening across many               briefly strengthen, then
+   networks. Cross-links form              decay overnight without
+   between regions during sleep.           cross-linking.
+
+   Result one week later:                  Result one week later:
+   Solid, retrievable understanding.       Forgotten almost everything.
+```
+
+This isn't because Student A is smarter. It's because she **engaged the material from many angles simultaneously** — and each angle activated NMDA receptors in a different region, triggering parallel calcium cascades.
 
 ### The takeaway
 

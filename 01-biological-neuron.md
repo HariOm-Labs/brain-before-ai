@@ -51,6 +51,8 @@ The interesting part isn't the *what* — it's the *how*. A neuron is a three-zo
 Imagine zooming in on one neuron buried somewhere in your prefrontal cortex. Up close, it doesn't look like a cell at all. It looks like a tree.
 
 ```
+
+
   ╔═══════════════════ ZONE 1 · LISTENING ═══════════════════╗
   ║                                                           ║
   ║       \           \            /           /              ║
@@ -159,29 +161,47 @@ At the end of the axon sit **axon terminals** — tiny "post offices" where the 
 
 When the signal reaches a terminal, it has to cross a tiny gap to reach the next neuron. That gap is called a **synapse**, and it's where most of the interesting drama in the brain happens.
 
-```mermaid
-flowchart TD
-    subgraph PRE["PRESYNAPTIC TERMINAL — sender"]
-        V[Vesicles holding<br/>neurotransmitter<br/>~10,000 molecules each]
-    end
+```
+  ╔═══════════ SENDER · presynaptic terminal ═══════════╗
+  ║                                                      ║
+  ║    spike arrives ━━━━▶ │                             ║
+  ║                        │                             ║
+  ║      ╭─────────────────┴──────────────────╮          ║
+  ║      │     ◯  ◯       ◯       ◯  ◯        │          ║
+  ║      │   ◯  ◯ ◯  ◯  ◯  ◯  ◯  ◯ ◯  ◯       │  ← vesicles
+  ║      │     ◯  ◯       ◯       ◯  ◯        │    (each holds
+  ║      │                                    │    ~10,000 NT
+  ║      │  ▼  ▼  ▼  ▼  ▼  ▼  ▼  ▼  ▼  ▼  ▼   │    molecules)
+  ║      ╰──┼──┼──┼──┼──┼──┼──┼──┼──┼──┼──┼───╯          ║
+  ║         ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·              ║
+  ╚═════════·══·══·══·══·══·══·══·══·══·══·══════════════╝
+            ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·    ◀── neurotransmitter
+            ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·        molecules diffusing
+   ┄┄┄┄┄┄┄┄ · ┄· ┄· ┄· ┄· ┄· ┄· ┄· ┄· ┄· ┄· ┄┄┄ SYNAPTIC CLEFT
+            ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·        (the 20–40 nm gap
+   ┄┄┄┄┄┄┄┄ · ┄· ┄· ┄· ┄· ┄· ┄· ┄· ┄· ┄· ┄· ┄┄┄    crossed in <1 ms)
+            ·  ·  ·  ·  ·  ·  ·  ·  ·  ·  ·
+  ╔═════════·══·══·══·══·══·══·══·══·══·══·══════════════╗
+  ║         ▼  ▼  ▼  ▼  ▼  ▼  ▼  ▼  ▼  ▼  ▼              ║
+  ║      ╭──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴──┴───╮          ║
+  ║      │  ╥  ╥  ╥  ╥  ╥  ╥  ╥  ╥  ╥  ╥  ╥   │ ← AMPA receptors
+  ║      │  ║  ║  ║  ║  ║  ║  ║  ║  ║  ║  ║   │   (open gates,
+  ║      │                                    │    let + ions in)
+  ║      │       ╫     ╫     ╫     ╫          │
+  ║      │       ║     ║     ║     ║          │ ← NMDA receptors
+  ║      │                                    │   (detect when
+  ║      │                                    │    both neurons
+  ║      │       ▼ + ions flow into spine ▼   │    fire together
+  ║      ╰────────────────┬───────────────────╯    = LEARNING)
+  ║                       │                      ║
+  ║                       ▼  signal continues    ║
+  ║                  to next neuron's soma       ║
+  ║                                                      ║
+  ╚═══════════ RECEIVER · postsynaptic spine ═══════════╝
 
-    subgraph CLEFT["SYNAPTIC CLEFT — 20–40 nm gap"]
-        NT[Neurotransmitter diffuses across]
-    end
-
-    subgraph POST["POSTSYNAPTIC SPINE — receiver"]
-        R1[AMPA receptors<br/>~50 on weak synapse<br/>~500 on strong one]
-        R2[NMDA receptors<br/>detect when both neurons<br/>fire together = LEARNING]
-    end
-
-    V -->|spike arrives<br/>triggers release| NT
-    NT -->|binds receptors<br/>in under 1 ms| R1
-    NT --> R2
-    R1 -->|positive ions flow in<br/>signal continues| NEXT[Next neuron's soma]
-
-    style PRE fill:#ffebee,stroke:#c62828
-    style CLEFT fill:#fff9c4,stroke:#f9a825
-    style POST fill:#e8f5e9,stroke:#2e7d32
+   Weak synapse  →  ~50 AMPA receptors   (faint signal)
+   Strong synapse → ~500 AMPA receptors  (loud signal — 10× the response
+                                          to the same neurotransmitter)
 ```
 
 The gap is 20–40 nanometers wide — so small you could fit hundreds across the width of a human hair. Yet that gap is **the single most important feature of biological intelligence.**

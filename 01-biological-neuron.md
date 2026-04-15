@@ -51,39 +51,58 @@ The interesting part isn't the *what* — it's the *how*. A neuron is a three-zo
 Imagine zooming in on one neuron buried somewhere in your prefrontal cortex. Up close, it doesn't look like a cell at all. It looks like a tree.
 
 ```
-                   \   |   /
-                    \  |  /                ╭─── LISTENING ZONE ───╮
-                     \\|//                 │  Dendrites and spines │
-                   \  \|/  /               │  receive signals from │
-                    \ \|/ /                │  thousands of other   │
-                     \\|//                 │  neurons at once.     │
-                      \|/                  ╰───────────────────────╯
-                       ▼
-                 ┌──────────┐
-                 │          │              ╭─── DECIDING ZONE ─────╮
-                 │   SOMA   │              │  The cell body adds   │
-                 │    ●     │ ← nucleus    │  up every input.      │
-                 │          │              │  Fires a spike if the │
-                 └─────┬────┘              │  total crosses the    │
-                       │ ← axon hillock    │  firing threshold.    │
-                       │  (spike starts    ╰───────────────────────╯
-                       │   here)
-                   ━━━━│━━━━
-                       │                   ╭── BROADCASTING ZONE ──╮
-                   ━━━━│━━━━ ← myelin      │  The axon is a long   │
-                       │     insulation    │  wire that carries    │
-                   ━━━━│━━━━               │  the spike to other   │
-                       │                   │  neurons at up to     │
-                   ━━━━│━━━━               │  120 m/s.             │
-                       │                   │                       │
-                     ╱ │ ╲                 │  Myelin (the bands)   │
-                    ╱  │  ╲                │  is fatty insulation  │
-                   ╱   │   ╲               │  that makes it fast.  │
-                  ●    ●    ●              │                       │
-                  ▼    ▼    ▼              │  Terminals (the fan)  │
-              (to other neurons)           │  release chemicals    │
-                                           │  into next neurons.   │
-                                           ╰───────────────────────╯
+  ╔═══════════════════ ZONE 1 · LISTENING ═══════════════════╗
+  ║                                                           ║
+  ║       \           \            /           /              ║
+  ║        \●          \●          ●/         ●/              ║
+  ║         \           \          /          /               ║
+  ║       ●_ \       ●_  \        /  _●      / _●             ║
+  ║          \\         \\      //          //                ║
+  ║           \\●        \\●  ●//         ●//                 ║
+  ║            \\         \\  //           //                 ║
+  ║          ●__\\______●__\\ //__●_______//__●               ║
+  ║              \\         \\//          //                  ║
+  ║               \\●        \●          //●                  ║
+  ║                \\_________\\________//                    ║
+  ║                            \\      //                     ║
+  ║                             \\____//                      ║
+  ║                          │                                ║
+  ║   Dendrites  = the branches reaching outward              ║
+  ║   Spines (●) = mushroom-shaped bumps along every branch   ║
+  ║                (not just at tips) — each one is one       ║
+  ║                synapse from another neuron.               ║
+  ║                A typical neuron has 2,000–5,000.          ║
+  ╚══════════════════════════│════════════════════════════════╝
+                             │
+                             ▼
+  ╔═══════════════════ ZONE 2 · DECIDING ════════════════════╗
+  ║                  ┌──────────┐                             ║
+  ║                  │          │                             ║
+  ║                  │   SOMA   │ ← nucleus inside            ║
+  ║                  │    ●     │                             ║
+  ║                  │          │   The cell body sums every  ║
+  ║                  └─────┬────┘   incoming signal and fires ║
+  ║                        │ ← axon hillock                   ║
+  ║                        │   (spike ignites here first      ║
+  ║                        │    if total crosses −55 mV)      ║
+  ╚════════════════════════│══════════════════════════════════╝
+                           │
+                           ▼
+  ╔════════════════ ZONE 3 · BROADCASTING ═══════════════════╗
+  ║                        │                                  ║
+  ║                    ━━━━│━━━━ ← myelin (fatty insulation   ║
+  ║                        │       — speeds the spike up      ║
+  ║                    ━━━━│━━━━   to ~120 m/s)               ║
+  ║                        │                                  ║
+  ║                    ━━━━│━━━━                              ║
+  ║                        │                                  ║
+  ║                      ╱ │ ╲   ← axon terminals             ║
+  ║                     ╱  │  ╲     (chemical hand-off to     ║
+  ║                    ╱   │   ╲     the next neurons)        ║
+  ║                   ●    ●    ●                             ║
+  ║                   ▼    ▼    ▼                             ║
+  ║          (to thousands of other neurons)                  ║
+  ╚═══════════════════════════════════════════════════════════╝
 ```
 
 Three zones, one job each. Same architecture in every one of your 86 billion neurons. **And signal flow is one-way** — listening → deciding → broadcasting, never the reverse. That one-way-ness is essential. It's how the brain maintains direction and coherence across billions of conversations happening at once.
